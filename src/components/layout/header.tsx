@@ -11,19 +11,12 @@ export default function Header() {
 
   const navItems = [
     { name: "Home", href: "/" },
-    { name: "Work", href: "/work" },
+    { name: "Services", href: "/work" },
     {
-      name: "Expertise",
+      name: "Technologies",
       dropdown: [
         { name: "Web Development", href: "/expertise/web" },
         { name: "UI/UX Design", href: "/expertise/design" },
-      ],
-    },
-    {
-      name: "Insights",
-      dropdown: [
-        { name: "Blog", href: "/insights/blog" },
-        { name: "Case Studies", href: "/insights/case-studies" },
       ],
     },
     {
@@ -39,7 +32,6 @@ export default function Header() {
   return (
     <header className="flex justify-center py-6 bg-white">
       <nav className="flex items-center bg-white shadow-sm rounded-full px-6 w-full max-w-6xl justify-center space-x-6">
-        {/* Nav Links */}
         {navItems.map((item) => (
           <div key={item.name} className="relative group">
             {item.dropdown ? (
@@ -69,7 +61,6 @@ export default function Header() {
               </Link>
             )}
 
-            {/* Dropdown Menu */}
             {item.dropdown && openMenu === item.name && (
               <div className="absolute left-0 mt-2 w-48 bg-white rounded-lg shadow-lg border">
                 {item.dropdown.map((subItem) => (
@@ -86,7 +77,6 @@ export default function Header() {
           </div>
         ))}
 
-        {/* CTA Button */}
         <Link
           href="/free-audit"
           className="bg-purple-600 hover:bg-purple-700 text-white px-5 py-2 rounded-full transition font-medium shadow-md leading-[1.5rem]"
@@ -95,7 +85,6 @@ export default function Header() {
         </Link>
       </nav>
 
-      {/* Mobile CTA */}
       <div className="fixed bottom-4 left-1/2 transform -translate-x-1/2 sm:hidden">
         <Link
           href="/free-audit"
