@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { ChevronDown } from "lucide-react";
@@ -8,7 +8,6 @@ import { ChevronDown } from "lucide-react";
 export default function Header() {
   const pathname = usePathname();
   const [openMenu, setOpenMenu] = useState<string | null>(null);
-
 
   const navItems = [
     { name: "Home", href: "/" },
@@ -39,7 +38,8 @@ export default function Header() {
 
   return (
     <header className="flex justify-center py-6 bg-white">
-      <nav className="flex items-center space-x-2 bg-white shadow-sm rounded-full px-6 py-2">
+      <nav className="flex items-center bg-white shadow-sm rounded-full px-6 w-full max-w-6xl justify-center space-x-6">
+        {/* Nav Links */}
         {navItems.map((item) => (
           <div key={item.name} className="relative group">
             {item.dropdown ? (
@@ -47,7 +47,7 @@ export default function Header() {
                 onClick={() =>
                   setOpenMenu(openMenu === item.name ? null : item.name)
                 }
-                className={`flex items-center px-4 py-2 rounded-full transition ${
+                className={`flex items-center px-4 py-2 rounded-full transition leading-[1.5rem] ${
                   pathname === item.href
                     ? "bg-purple-200 text-purple-800"
                     : "hover:bg-gray-100"
@@ -59,7 +59,7 @@ export default function Header() {
             ) : (
               <Link
                 href={item.href}
-                className={`px-4 py-2 rounded-full transition ${
+                className={`flex items-center px-4 py-2 rounded-full transition leading-[1.5rem] ${
                   pathname === item.href
                     ? "bg-purple-200 text-purple-800"
                     : "hover:bg-gray-100"
@@ -85,7 +85,25 @@ export default function Header() {
             )}
           </div>
         ))}
+
+        {/* CTA Button */}
+        <Link
+          href="/free-audit"
+          className="bg-purple-600 hover:bg-purple-700 text-white px-5 py-2 rounded-full transition font-medium shadow-md leading-[1.5rem]"
+        >
+          Get a Free IT Audit
+        </Link>
       </nav>
+
+      {/* Mobile CTA */}
+      <div className="fixed bottom-4 left-1/2 transform -translate-x-1/2 sm:hidden">
+        <Link
+          href="/free-audit"
+          className="bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-full shadow-lg font-semibold"
+        >
+          Get a Free IT Audit
+        </Link>
+      </div>
     </header>
   );
 }
