@@ -89,14 +89,15 @@ export default function Header() {
         </nav>
 
         {/* Right: CTA Button */}
-        <div className="bg-white shadow-sm rounded-full px-6 py-2">
-          <Link
-            href="/free-audit"
-            className="bg-purple-600 hover:bg-purple-700 text-white px-5 py-2 rounded-full transition font-medium shadow-md"
-          >
-            Get a Free IT Audit
-          </Link>
-        </div>
+        <div className="rounded-full px-6 py-2">
+  <button
+    onClick={() => window.location.href = '/free-audit'}
+    className="bg-purple-600 hover:bg-purple-700 text-white px-5 py-2 rounded-full transition font-medium shadow-md"
+  >
+    Get a Free IT Audit
+  </button>
+</div>
+
       </div>
 
       {/* Mobile Floating CTA */}
