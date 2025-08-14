@@ -11,7 +11,7 @@ export default function Header() {
 
   const navItems = [
     { name: "Home", href: "/" },
-    { name: "Services", href: "/work" },
+    { name: "Services", href: "/about" },
     {
       name: "Technologies",
       dropdown: [
@@ -30,20 +30,15 @@ export default function Header() {
   ];
 
   return (
-    <header className=" sticky top-0 z-50 flex justify-center py-6 bg-white px-4">
+    <header className=" sticky top-0 z-50 flex justify-center py-6  px-4">
       <div className="flex items-center justify-between w-full max-w-7xl gap-4 flex-wrap">
-        
         {/* Left: Logo */}
-       <div className="bg-white shadow-sm rounded-full px-6 py-2 flex items-center">
-  <Link href="/" className="flex items-center">
-    <img
-      src="/logo.jpg"
-      alt="Logo"
-      className="h-10 w-auto"
-    />
-    <span className="ml-2 text-lg font-semibold">Trinumics</span>
-  </Link>
-</div>
+        <div className="bg-white shadow-sm rounded-full px-6 py-2 flex items-center">
+          <Link href="/" className="flex items-center">
+            <img src="/logo.jpg" alt="Logo" className="h-10 w-auto" />
+            <span className="ml-2 text-lg font-semibold">Trinumics</span>
+          </Link>
+        </div>
 
         {/* Middle: Navigation */}
         <nav className="flex items-center bg-white shadow-sm rounded-full px-6 py-2 space-x-4">
@@ -102,7 +97,6 @@ export default function Header() {
             Get a Free IT Audit
           </Link>
         </div>
-
       </div>
 
       {/* Mobile Floating CTA */}
