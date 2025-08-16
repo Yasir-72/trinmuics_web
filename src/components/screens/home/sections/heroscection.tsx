@@ -3,11 +3,11 @@ import React from "react";
 
 export default function HeroSection() {
   return (
-    <section className="bg-gradient-to-b from-white via-gray-50 to-gray-100 px-6 py-12">
+    <section className="bg-gradient-to-b bg-white px-6 py-8 rounded-xl">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10  justify-items-center ">
         {/* Left Content */}
         <div>
-          <h1 className="text-4xl md:text-5xl font-extrabold leading-tight text-gray-900 mb-20">
+          <h1 className="text-3xl md:text-4xl font-extrabold leading-tight text-gray-900 mb-20">
             Taking Your Business into the{" "}
             <span className="bg-gradient-to-r from-purple-600 to-pink-500 bg-clip-text text-transparent">
               Next Digital Era
