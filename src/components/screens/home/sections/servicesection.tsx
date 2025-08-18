@@ -37,7 +37,7 @@ const services = [
 
 export default function ServiceSection() {
   return (
-    <section className="w-full py-16 md:py-20 bg-white text-neutral-900">
+    <section className="w-full py-16 md:py-20 bg-white text-neutral-900 rounded-xl mt-3 ">
       <div className="mx-auto max-w-7xl px-6">
         {/* Heading */}
         <div className="mb-10 md:mb-14 text-center">
@@ -59,7 +59,7 @@ export default function ServiceSection() {
               <div className="p-6 md:p-7">
                 {/* Icon + Title */}
                 <div className="flex items-center gap-3">
-                  <span className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-purple-50 ring-1 ring-purple-200 transition-all duration-300 group-hover:bg-purple-100 group-hover:ring-purple-400 group-hover:scale-110">
+                  <span className="inline-flex h-11 w-11 items-center justify-center rounded-lg bg-purple-50 ring-1 ring-purple-200 transition-all duration-300 group-hover:bg-purple-100 group-hover:ring-purple-400 group-hover:scale-110">
                     <Icon className="h-5 w-5 text-purple-600 transition-colors duration-300 group-hover:text-purple-700" />
                   </span>
                   <h3 className="text-lg font-semibold leading-snug text-neutral-900 transition-colors duration-300 group-hover:text-purple-700">

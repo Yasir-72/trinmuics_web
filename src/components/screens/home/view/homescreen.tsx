@@ -1,5 +1,12 @@
 import React from "react";
+import HeroSection from "../sections/heroscection";
+import ServiceSection from "../sections/servicesection";
 
 export default function Homescreen() {
-  return <div></div>;
+  return (
+    <>
+      <HeroSection />
+      <ServiceSection />
+    </>
+  );
 }

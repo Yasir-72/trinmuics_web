@@ -49,7 +49,7 @@ export default function Header() {
                   onClick={() =>
                     setOpenMenu(openMenu === item.name ? null : item.name)
                   }
-                  className={`flex items-center px-4 py-2 rounded-xl transition ${
+                  className={`flex items-center px-4 py-2 rounded-lg transition ${
                     pathname === item.href
                       ? "bg-purple-200 text-purple-800"
                       : "hover:bg-gray-100"
@@ -72,7 +72,7 @@ export default function Header() {
               )}
 
               {item.dropdown && openMenu === item.name && (
-                <div className="absolute left-0 mt-2 w-48 bg-white rounded-2xl shadow-lg border">
+                <div className="absolute left-0 mt-2 w-48 bg-white rounded-lg shadow-lg border">
                   {item.dropdown.map((subItem) => (
                     <Link
                       key={subItem.name}
@@ -92,7 +92,7 @@ export default function Header() {
        
           <button
             onClick={() => (window.location.href = "/free-audit")}
-            className="bg-purple-600 hover:bg-purple-700 text-white px-5 py-2 rounded-xl transition font-medium shadow-md"
+            className="bg-purple-600 hover:bg-purple-700 text-white px-5 py-2 rounded-lg transition font-medium shadow-md"
           >
             Get a Free IT Audit
           </button>
