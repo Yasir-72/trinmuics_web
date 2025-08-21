@@ -5,6 +5,7 @@ import WhyChooseUs from "../sections/whysection";
 import HowItWorks from "../sections/howsection";
 import ClientSection from "../sections/clientscroll";
 import CaseStudyCard from "../sections/casestudy";
+import LanguagesScroll from "../sections/languages";
 export default function Homescreen() {
   return (
     <>
@@ -14,6 +15,7 @@ export default function Homescreen() {
       <HowItWorks />
       <ClientSection />
       <CaseStudyCard />
+      <LanguagesScroll />
     </>
   );
 }
