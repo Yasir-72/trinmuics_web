@@ -6,6 +6,9 @@ import HowItWorks from "../sections/howsection";
 import ClientSection from "../sections/clientscroll";
 import CaseStudyCard from "../sections/casestudy";
 import LanguagesScroll from "../sections/languages";
+import Testimonials from "../sections/testimonials";
+import Questainaire from "../sections/questainaire";
+import Form from "../sections/form";
 export default function Homescreen() {
   return (
     <>
@@ -16,6 +19,9 @@ export default function Homescreen() {
       <ClientSection />
       <CaseStudyCard />
       <LanguagesScroll />
+      <Testimonials />
+      <Questainaire />
+      <Form />
     </>
   );
 }
