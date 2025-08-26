@@ -27,49 +27,45 @@ export default function CaseStudies() {
   ];
 
   return (
-    <section className="py-6 rounded-xl bg-white mt-3">
-      <div className="max-w-5xl mx-auto bg-white shadow-xl rounded-2xl border border-purple-300 p-8">
-        {/* Heading */}
-        <h2 className="text-3xl font-bold text-center mb-8 text-purple-600">
-          Case Studies
-        </h2>
+    <section className="py-6 mt-3 px-6 md:px-10 bg-white rounded-xl">
+      {/* Heading */}
+      <h2 className="text-3xl font-bold text-center mb-8 text-purple-600">
+        Case Studies
+      </h2>
 
-        {/* Scrollable Wrapper */}
-        <div className="max-h-[500px] overflow-y-auto pr-2 scrollbar-thin scrollbar-thumb-purple-400 scrollbar-track-gray-100">
-          {caseStudies.map((study, index) => (
-            <div
-              key={index}
-              className="bg-white border border-purple-200 rounded-xl p-6 shadow-sm mb-6 
-              transition-all duration-300 transform hover:scale-[1.02] hover:shadow-lg hover:border-purple-500"
-            >
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                {/* Text Content */}
-                <div className="col-span-2 space-y-3">
-                  <h3 className="text-xl font-semibold text-purple-700">
-                    {study.title}
-                  </h3>
-                  <p className="text-gray-700 text-sm leading-relaxed">
-                    {study.description}
-                  </p>
-                  <p className="text-sm text-purple-600 font-medium bg-purple-50 px-3 py-1 rounded-lg inline-block">
-                    Technologies: {study.technologies}
-                  </p>
-                </div>
+      {/* List */}
+      <div className="space-y-6 overflow-y-auto pr-2">
+        {caseStudies.map(({ title, description, technologies, image }, i) => (
+          <div
+            key={i}
+            className="p-6 border border-purple-200 rounded-xl shadow-sm 
+                       transition-all duration-300 hover:shadow-lg hover:border-purple-500"
+          >
+            <div className="grid gap-6 md:grid-cols-3">
+              {/* Text */}
+              <div className="col-span-2 space-y-10 w-3/4">
+                <h3 className="text-3xl font-semibold text-purple-700">{title}</h3>
+                <p className="text-md text-gray-700 leading-relaxed">
+                  {description}
+                </p>
+                <span className="inline-block px-3 py-1 text-md font-medium text-purple-600 bg-purple-50 rounded-lg">
+                  Technologies: {technologies}
+                </span>
+              </div>
 
-                {/* Image */}
-                <div className="flex justify-center items-center border border-purple-600 rounded-lg overflow-hidden">
-                  <Image
-                    src={study.image}
-                    alt={study.title}
-                    width={220}
-                    height={140}
-                    className="object-cover transition-transform duration-300 hover:scale-105"
-                  />
-                </div>
+              {/* Image */}
+              <div className="flex items-center justify-center border border-purple-600 rounded-lg overflow-hidden">
+                <Image
+                  src={image}
+                  alt={title}
+                  width={220}
+                  height={140}
+                  className="object-cover transition-transform duration-300 hover:scale-105"
+                />
               </div>
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
     </section>
   );

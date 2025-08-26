@@ -11,7 +11,7 @@ const clients = [
 
 export default function ClientScroll() {
   return (
-    <section className="py-6 rounded-xl mt-3 bg-white">
+    <section className="py-6 rounded-xl mt-3 bg-white px-10">
       {/* Title */}
       <h2 className="text-center text-2xl font-bold text-gray-900 mb-3">
         Our Clients
@@ -43,19 +43,19 @@ export default function ClientScroll() {
       <div className="grid md:grid-cols-2 gap-4 mt-8">
         {/* Left Column with Cards */}
         <div className="grid grid-cols-2 gap-4">
-          <div className="p-4 rounded-lg bg-gray-100 text-purple-700 shadow-md hover:scale-105 hover:shadow-purple-400/70 transition-transform duration-300">
+          <div className="p-4 rounded-lg bg-gray-100 text-purple-700 shadow-md hover:shadow-purple-400/70 transition-transform duration-300">
             <h3 className="font-semibold">36 Standards of Quality</h3>
           </div>
-          <div className="p-4 rounded-lg bg-gray-100 text-purple-700 shadow-md hover:scale-105 hover:shadow-purple-400/70 transition-transform duration-300">
+          <div className="p-4 rounded-lg bg-gray-100 text-purple-700 shadow-md hover:shadow-purple-400/70 transition-transform duration-300">
             <h3 className="font-semibold">Hiring the top 3% of talent</h3>
           </div>
-          <div className="col-span-2 p-4 rounded-lg bg-gray-100 text-purple-700 shadow-md hover:scale-105 hover:shadow-purple-400/70 transition-transform duration-300">
+          <div className="col-span-2 p-4 rounded-lg bg-gray-100 text-purple-700 shadow-md hover:shadow-purple-400/70 transition-transform duration-300">
             <h3 className="font-semibold">100% Estimates Match</h3>
           </div>
         </div>
 
         {/* Right Column */}
-        <div className="p-6 rounded-lg bg-gray-100 text-purple-700 shadow-md hover:scale-105 hover:shadow-purple-400/70 transition-transform duration-300">
+        <div className="p-6 rounded-lg bg-gray-100 text-purple-700 shadow-md hover:shadow-purple-400/70 transition-transform duration-300">
           <h3 className="text-xl font-bold mb-2">36 Standards of Quality</h3>
           <p className="text-sm leading-relaxed">
             At our company, we adhere to a comprehensive set of 36 rigorous
