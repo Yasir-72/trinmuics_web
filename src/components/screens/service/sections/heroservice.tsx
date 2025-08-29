@@ -4,7 +4,7 @@
 import { FaRocket, FaMobileAlt, FaPaintBrush } from "react-icons/fa";
 import Image from "next/image";
 
-export default function ServiceSection() {
+export default function ServiceHeroSection() {
   return (
     <section className="bg-white text-gray-900 py-20">
       <div className="container mx-auto px-6 md:px-12 lg:px-20 grid lg:grid-cols-2 gap-12 items-center">

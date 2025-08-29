@@ -1,10 +1,10 @@
 import React from "react";
-import ServiceSection from "./hero";
+import ServiceScreen from "@/components/screens/service/view/servicescreen";
 
 export default function Page() {
   return (
-    <main>
-      <ServiceSection />
-    </main>
+    <>
+      <ServiceScreen />
+    </>
   );
 }
