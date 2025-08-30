@@ -1,4 +1,3 @@
-// src/app/Service/page.tsx
 "use client";
 
 import { FaRocket, FaMobileAlt, FaPaintBrush } from "react-icons/fa";
@@ -6,7 +5,7 @@ import Image from "next/image";
 
 export default function ServiceHeroSection() {
   return (
-    <section className="bg-white text-gray-900 py-20">
+    <section className="bg-white text-gray-900 py-20  mt-3">
       <div className="container mx-auto px-6 md:px-12 lg:px-20 grid lg:grid-cols-2 gap-12 items-center">
         
         {/* Left Content */}
@@ -23,7 +22,7 @@ export default function ServiceHeroSection() {
             <div className="flex items-start space-x-4">
               <FaRocket className="text-3xl text-purple-600 mt-1" />
               <div>
-                <h3 className="text-xl font-semibold text-purple-700">
+                <h3 className="text-xl font-semibold text-gray-800">
                   Startup Development Services
                 </h3>
                 <p className="text-gray-600 text-sm">
@@ -36,7 +35,7 @@ export default function ServiceHeroSection() {
             <div className="flex items-start space-x-4">
               <FaMobileAlt className="text-3xl text-purple-600 mt-1" />
               <div>
-                <h3 className="text-xl font-semibold text-purple-700">
+                <h3 className="text-xl font-semibold text-gray-800">
                   Android and iOS Development
                 </h3>
                 <p className="text-gray-600 text-sm">
@@ -49,7 +48,7 @@ export default function ServiceHeroSection() {
             <div className="flex items-start space-x-4">
               <FaPaintBrush className="text-3xl text-purple-600 mt-1" />
               <div>
-                <h3 className="text-xl font-semibold text-purple-700">
+                <h3 className="text-xl font-semibold text-gray-800">
                   Custom UI/UX Design Services
                 </h3>
                 <p className="text-gray-600 text-sm">
@@ -58,13 +57,18 @@ export default function ServiceHeroSection() {
               </div>
             </div>
           </div>
+
+          {/* CTA Button */}
+          <button className="mt-10 px-8 py-3 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-lg shadow-md transition">
+            Get an Estimate
+          </button>
         </div>
 
         {/* Right Side Image */}
         <div className="relative flex justify-center">
           <div className="absolute -z-10 bg-purple-200 w-60 h-60 rounded-lg rotate-6"></div>
           <Image
-            src="/services-image.jpg" // <-- replace with your image
+            src="/services-image.jpg" // Replace with your actual image
             alt="Service Illustration"
             width={500}
             height={400}
