@@ -17,7 +17,7 @@ export default function Header() {
 
   return (
     <header className=" sticky top-0 z-50 flex justify-center py-3  ">
-      <div className="flex items-center justify-between w-full max-w-7xl gap-4 flex-wrap">
+      <div className="flex items-center justify-between w-full gap-4 flex-wrap">
         {/* Left: Logo */}
         <div className="bg-white shadow-sm rounded-xl px-6 py-2 flex items-center">
           <Link href="/" className="flex items-center">

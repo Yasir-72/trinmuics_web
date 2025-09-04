@@ -12,16 +12,16 @@ import Form from "../sections/form";
 export default function Homescreen() {
   return (
     <>
-      <HeroSection />
-      <ServiceSection />
-      <WhyChooseUs />
-      <HowItWorks />
-      <ClientSection />
-      <CaseStudyCard />
-      <LanguagesScroll />
-      <Testimonials />
-      <Questainaire />
-      <Form />
-    </>
+        <HeroSection />
+        <ServiceSection />
+        <WhyChooseUs />
+        <HowItWorks />
+        <ClientSection />
+        <CaseStudyCard />
+        <LanguagesScroll />
+        <Testimonials />
+        <Questainaire />
+        <Form />
+    </> 
   );
 }
