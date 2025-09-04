@@ -24,6 +24,7 @@ export default function CaseStudies() {
       technologies: "React, Next.js, Tailwind CSS, Firebase",
       image: "/case-study/saas.png",
     },
+  
   ];
 
   return (
