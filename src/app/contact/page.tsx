@@ -1,9 +1,10 @@
-import React from 'react'
+import React from "react";
+import ContractScreen from "@/components/screens/contactus/view/contactscreen"; // adjust the path based on your folder structure
 
-export default function page() {
+export default function Page() {
   return (
     <div>
-      <><h1>contact</h1></>
+      <ContractScreen />
     </div>
-  )
+  );
 }
