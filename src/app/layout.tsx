@@ -10,7 +10,6 @@ const montserrat = Montserrat({
   variable: "--font-montserrat",
 });
 
-
 // export const metadata: Metadata = {
 //   title: "My Next.js Website",
 //   description: "Using Montserrat globally",
@@ -29,8 +28,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        suppressHydrationWarning
-        className={`${montserrat.variable} antialiased bg-[#f3f3f3] px-6 md:px-10`}
+        suppressHydrationWarning={true}
+        className={`${montserrat.variable} antialiased bg-[#DDE2E5] px-6 md:px-10`}
       >
         <Header />
 

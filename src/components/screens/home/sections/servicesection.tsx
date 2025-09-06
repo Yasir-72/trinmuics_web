@@ -65,7 +65,7 @@ export default function ServiceSection() {
                   <h3 className="text-lg font-semibold leading-snug text-neutral-900 transition-colors duration-300 group-hover:text-purple-700">
                     {title}
                   </h3>
-                </div>
+                </div>  
                 {/* Description */}
                 <p className="mt-3.5 text-sm leading-relaxed text-neutral-600 transition-colors duration-300 group-hover:text-neutral-800">
                   {desc}
