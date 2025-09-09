@@ -37,15 +37,16 @@ const services = [
 
 export default function ServiceSection() {
   return (
-    <section className="w-full py-16 md:py-20 bg-white text-neutral-900 rounded-xl mt-3 ">
+    <section className="w-full py-16 md:py-20 bg-white text-[#2B2D2C] rounded-xl mt-3 ">
       <div className="mx-auto max-w-7xl px-6">
         {/* Heading */}
         <div className="mb-10 md:mb-14 text-center">
-          <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-neutral-900">
-            Our Core IT Services
+          <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-[#2B2D2C]">
+            Our Core IT <span className="text-[#ED4C22]">Services</span>
           </h2>
           <p className="mt-3 text-sm md:text-base text-neutral-600 max-w-2xl mx-auto">
-            Solutions engineered to scale with your business and deliver measurable impact.
+            Solutions engineered to scale with your business and deliver
+            measurable impact.
           </p>
         </div>
 
@@ -54,18 +55,18 @@ export default function ServiceSection() {
           {services.map(({ title, desc, Icon }) => (
             <div
               key={title}
-              className="group relative overflow-hidden rounded-2xl bg-white border border-neutral-200 shadow-md transition-all duration-300 hover:shadow-xl hover:border-purple-500 hover:-translate-y-1"
+              className="group relative overflow-hidden rounded-2xl bg-white border border-neutral-200 shadow-md transition-all duration-300 hover:shadow-xl hover:border-orange-400 hover:-translate-y-1"
             >
               <div className="p-6 md:p-7">
                 {/* Icon + Title */}
                 <div className="flex items-center gap-3">
-                  <span className="inline-flex h-11 w-11 items-center justify-center rounded-lg bg-purple-50 ring-1 ring-purple-200 transition-all duration-300 group-hover:bg-purple-100 group-hover:ring-purple-400 group-hover:scale-110">
-                    <Icon className="h-5 w-5 text-purple-600 transition-colors duration-300 group-hover:text-purple-700" />
+                  <span className="inline-flex h-11 w-11 items-center justify-center rounded-lg bg-orange-50 ring-1 ring-orange-300 transition-all duration-300 group-hover:bg-orange-100 group-hover:ring-orange-400 group-hover:scale-110">
+                    <Icon className="h-5 w-5 text-[#ED4C22] transition-colors duration-300 group-hover:text-[#ED4C22]" />
                   </span>
-                  <h3 className="text-lg font-semibold leading-snug text-neutral-900 transition-colors duration-300 group-hover:text-purple-700">
+                  <h3 className="text-lg font-semibold leading-snug text-[#2B2D2C] transition-colors duration-300 group-hover:text-[#ED4C22]">
                     {title}
                   </h3>
-                </div>  
+                </div>
                 {/* Description */}
                 <p className="mt-3.5 text-sm leading-relaxed text-neutral-600 transition-colors duration-300 group-hover:text-neutral-800">
                   {desc}

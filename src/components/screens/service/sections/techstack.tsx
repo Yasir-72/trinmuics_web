@@ -61,8 +61,8 @@ export default function TechStack() {
             Tech Stack We Use
           </h2>
           <p className="text-gray-600 max-w-3xl mx-auto">
-            We're thrilled to offer comprehensive development for Android, iOS,
-            and web applications! Our secure, scalable, high-performance
+            We&apos;re thrilled to offer comprehensive development for Android,
+            iOS, and web applications! Our secure, scalable, high-performance
             solutions guarantee smooth integration across all devices.
           </p>
         </div>

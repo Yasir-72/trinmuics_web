@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Phone, Menu, X } from "lucide-react";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function Header() {
@@ -18,21 +19,28 @@ export default function Header() {
   ];
 
   return (
-    <header className="sticky top-0 z-50  ">
+    <header className=" top-0 z-50  ">
       <div className="mx-auto flex max-w-screen-2xl items-center justify-between  py-3">
         {/* Logo */}
         <div className="bg-white shadow-sm rounded-xl px-5 py-2 flex items-center">
           <Link href="/" className="flex items-center space-x-2">
-            <img src="/logo.jpg" alt="Logo" className="h-10 w-auto rounded" />
+            <Image
+              src="/logo.jpg"
+              alt="Logo"
+              width={120} // adjust width
+              height={36} // adjust height
+              className="h-9 w-auto rounded"
+              priority // ensures it loads quickly (good for logo)
+            />
             {/* 👇 text disappears on mobile, shows from md+ */}
-            <span className="text-lg font-bold hidden md:inline">
+            <span className="text-2xl font-bold hidden lg:inline">
               Trinumics
             </span>
           </Link>
         </div>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center space-x-2 bg-white rounded-xl shadow px-4 py-2">
+        <nav className=" sticky hidden md:flex items-center space-x-2 bg-white rounded-xl shadow px-4 py-2">
           {navItems.map((item) => (
             <Link
               key={item.name}
@@ -49,8 +57,8 @@ export default function Header() {
         </nav>
 
         {/* CTA */}
-        <button className="hidden md:flex items-center gap-2 bg-[#2B2D2C] hover:bg-amber-700 text-white px-6 py-2 rounded-lg font-medium shadow-md transition-colors duration-200 hover:shadow-lg">
-          <span>BOOK A CALL</span>
+        <button className="hidden md:flex items-center gap-2 bg-[#2B2D2C] hover:bg-amber-700 text-white px-6 py-4 rounded-lg font-medium shadow-md transition-colors duration-200 hover:shadow-lg">
+          <span className="hidden lg:inline">BOOK A CALL</span>
           <Phone className="w-5 h-5 text-[#ED4C22] transition-colors group-hover:text-white" />
         </button>
 
@@ -59,7 +67,7 @@ export default function Header() {
           onClick={() => setOpen((p) => !p)}
           className="bg-white md:hidden inline-flex items-center justify-center rounded-lg p-2 hover:bg-gray-100 "
         >
-          {open ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          {open ? <X className="w-8 h-8" /> : <Menu className="w-8 h-8" />}
         </button>
       </div>
 

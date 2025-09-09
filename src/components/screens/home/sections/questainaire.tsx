@@ -3,15 +3,18 @@
 import { useState } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 
 const faqs = [
   {
-    question: "How do we get started, and what do you need from us to begin the website design process?",
+    question:
+      "How do we get started, and what do you need from us to begin the website design process?",
     answer:
       "We begin by understanding your requirements, goals, and preferred design style. Once we gather the details, we create a project plan.",
   },
   {
-    question: "What makes web design for startups different from other website design services?",
+    question:
+      "What makes web design for startups different from other website design services?",
     answer:
       "Startup web design focuses on fast, scalable, and cost-effective solutions tailored for growth and quick market launch.",
   },
@@ -21,12 +24,14 @@ const faqs = [
       "We specialize in lean MVP development, agile design, and quick delivery while maintaining professional quality.",
   },
   {
-    question: "How do you make a startup website match a startup's brand and vision?",
+    question:
+      "How do you make a startup website match a startup's brand and vision?",
     answer:
       "We work closely with your brand guidelines, vision, and mission, ensuring the website reflects your identity and goals.",
   },
   {
-    question: "Can you help clients with branding and logo design as part of the web design process?",
+    question:
+      "Can you help clients with branding and logo design as part of the web design process?",
     answer:
       "Yes! Our design team can assist with logo creation, branding assets, and UI/UX that align with your business identity.",
   },
@@ -67,7 +72,9 @@ export default function FAQSection() {
                     onClick={() => toggleFAQ(index)}
                     className="w-full flex justify-between items-center p-4 bg-purple-50 hover:bg-purple-100 transition"
                   >
-                    <span className="font-semibold text-left">{faq.question}</span>
+                    <span className="font-semibold text-left">
+                      {faq.question}
+                    </span>
                     {openIndex === index ? (
                       <ChevronUp className="text-purple-600" />
                     ) : (
@@ -97,9 +104,11 @@ export default function FAQSection() {
 
             {/* Right Side - Image */}
             <div className="flex justify-center">
-              <img
-                src="/images/software-hardware.png" // place your image inside /public/images
+              <Image
+                src="/images/software-hardware.png" // must be inside /public/images
                 alt="Software and Hardware"
+                width={600} // pick a good width
+                height={400} // pick a good height
                 className="rounded-2xl shadow-lg w-full max-w-md object-cover"
               />
             </div>

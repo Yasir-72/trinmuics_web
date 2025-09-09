@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowLeft, ArrowRight } from "lucide-react";
+import Image from "next/image";
 
 const testimonials = [
   {
@@ -78,11 +79,14 @@ export default function Testimonials() {
               className="p-6 rounded-2xl border shadow-md bg-purple-50"
             >
               <div className="flex items-center gap-3 mb-4">
-                <img
-                  src={t.logo}
-                  alt={`${t.company} logo`}
-                  className="w-10 h-10 rounded-md object-contain"
-                />
+              
+<Image
+  src={t.logo}
+  alt={`${t.company} logo`}
+  width={40}
+  height={40}
+  className="w-10 h-10 rounded-md object-contain"
+/>
                 <div>
                   <h3 className="text-lg font-bold text-purple-700">{t.name}</h3>
                   <p className="text-sm text-gray-600">{t.company}</p>
