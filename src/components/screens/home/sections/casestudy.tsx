@@ -28,7 +28,7 @@ export default function CaseStudies() {
   ];
 
   return (
-    <section className="py-6 mt-3 px-6 md:px-10 bg-white rounded-xl">
+    <section className="py-6 mt-3 px-6 md:px-10 bg-white rounded-xl max-w-screen-2xl mx-auto">
       {/* Heading */}
       <h2 className="text-3xl font-bold text-center mb-8 text-purple-600">
         Case Studies

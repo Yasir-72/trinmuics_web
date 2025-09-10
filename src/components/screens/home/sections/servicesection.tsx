@@ -37,7 +37,7 @@ const services = [
 
 export default function ServiceSection() {
   return (
-    <section className="w-full py-16 md:py-20 bg-white text-[#2B2D2C] rounded-xl mt-3 ">
+    <section className="w-full py-16 md:py-20 bg-white text-[#2B2D2C] rounded-xl mt-3 max-w-screen-2xl mx-auto">
       <div className="mx-auto max-w-7xl px-6">
         {/* Heading */}
         <div className="mb-10 md:mb-14 text-center">

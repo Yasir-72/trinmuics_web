@@ -3,7 +3,7 @@ import "./globals.css";
 import Header from "../components/layout/header";
 import Footer from "@/components/layout/footer";
 // import SplashScreen from "@/components/layout/splashscreen"; // ✅ Import Splash Screen
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -17,12 +17,12 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const [loading, setLoading] = useState(true);
+  // const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    const timer = setTimeout(() => setLoading(false), 2500); // splash screen visible for 2.5s
-    return () => clearTimeout(timer);
-  }, []);
+  // useEffect(() => {
+  //   const timer = setTimeout(() => setLoading(false), 2500); // splash screen visible for 2.5s
+  //   return () => clearTimeout(timer);
+  // }, []);
 
   return (
     <html lang="en">

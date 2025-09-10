@@ -45,7 +45,7 @@ export default function FAQSection() {
   };
 
   return (
-    <section className="py-16 bg-white rounded-xl mt-3">
+    <section className="py-16 bg-white rounded-xl mt-3 max-w-screen-2xl mx-auto">
       <div className="bg-white text-black py-12 px-6">
         <div className="max-w-6xl mx-auto">
           {/* Heading + Subheading */}
