@@ -1,117 +1,103 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Cpu, Server, Settings, Code, Cloud, Shield } from "lucide-react";
+import { Lightbulb, Layout, Code, Rocket, Check } from "lucide-react";
 
-const hardwareSteps = [
+const steps = [
   {
-    title: "Consultation & Assessment",
-    desc: "We analyze your infrastructure needs and evaluate existing hardware setups.",
-    Icon: Cpu,
+    title: "Discover & Plan",
+    desc: "We start by understanding your vision, defining clear goals, and setting a solid foundation for your project.",
+    Icon: Lightbulb,
+    deliverables: [
+      "Requirement Analysis",
+      "Project Roadmap",
+      "Technical Feasibility",
+      "Resource Planning",
+    ],
   },
   {
-    title: "Hardware Setup",
-    desc: "Servers, networking devices, and storage are installed and configured.",
-    Icon: Server,
+    title: "Design & Prototype",
+    desc: "Our designers craft intuitive experiences and interactive prototypes to validate your product early.",
+    Icon: Layout,
+    deliverables: [
+      "Wireframes & UI Mockups",
+      "Interactive Prototypes",
+      "Design System",
+      "User Feedback Session",
+    ],
   },
   {
-    title: "Optimization & Maintenance",
-    desc: "We fine-tune systems and ensure ongoing hardware reliability.",
-    Icon: Settings,
-  },
-];
-
-const softwareSteps = [
-  {
-    title: "Requirement Analysis",
-    desc: "We understand your workflow and define the right software strategy.",
+    title: "Build & Test",
+    desc: "We develop scalable features, integrate APIs, and perform rigorous testing to ensure performance and security.",
     Icon: Code,
+    deliverables: [
+      "Agile Development Sprints",
+      "Code Reviews",
+      "Automated & Manual Testing",
+      "Bug Fixes & Optimization",
+    ],
   },
   {
-    title: "Development & Deployment",
-    desc: "Applications and cloud solutions are built, tested, and deployed securely.",
-    Icon: Cloud,
-  },
-  {
-    title: "Monitoring & Security",
-    desc: "We provide continuous monitoring, updates, and strong security practices.",
-    Icon: Shield,
+    title: "Launch & Grow",
+    desc: "Once live, we monitor, optimize, and continuously improve your product for long-term success.",
+    Icon: Rocket,
+    deliverables: [
+      "Deployment & Monitoring",
+      "Performance Reports",
+      "Feature Updates",
+      "Ongoing Support",
+    ],
   },
 ];
 
 export default function HowItWorks() {
   return (
-    <section className="py-12 bg-gradient-to-r from-purple-600 to-indigo-600 text-white rounded-xl mt-3 max-w-screen-2xl mx-auto">
-      <div className="max-w-7xl mx-auto px-6">
-        <h2 className="text-3xl font-bold text-center mb-10">How It Works</h2>
+    <section className="py-24 bg-white max-w-screen-2xl rounded-xl mt-6 mx-auto">
+      <div className="max-w-6xl mx-auto px-6">
+        <h2 className="text-5xl font-extrabold text-center mb-20 text-[#2B2D2C]">
+          How It Works
+        </h2>
 
-        {/* Two-column layout */}
-        <div className="grid md:grid-cols-2 gap-8">
-          {/* Hardware Solutions */}
-          <div>
-            <h3 className="text-xl font-semibold mb-6 text-center">🔧 Hardware Solutions</h3>
-            <div className="space-y-6">
-              {hardwareSteps.map((step, idx) => (
-                <motion.div
-                  key={idx}
-                  initial={{ opacity: 0, x: -50 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.5, delay: idx * 0.2 }}
-                  viewport={{ once: true }}
-                  whileHover={{ scale: 1.03, y: -4 }}
-                  className="flex items-start gap-3 cursor-pointer"
-                >
-                  {/* Icon with pulse animation */}
-                  <motion.div
-                    animate={{ scale: [1, 1.15, 1] }}
-                    transition={{ repeat: Infinity, duration: 2 }}
-                    className="flex items-center justify-center w-12 h-12 rounded-full bg-white text-purple-600 shadow-lg flex-shrink-0"
-                  >
-                    <step.Icon className="w-6 h-6" />
-                  </motion.div>
+        <div className="space-y-20">
+          {steps.map((step, idx) => (
+            <motion.div
+              key={idx}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: idx * 0.2 }}
+              viewport={{ once: true }}
+              className="relative flex flex-col items-center text-center"
+            >
+              {/* Icon Circle */}
+              <div className="flex items-center justify-center w-24 h-24 rounded-full bg-[#ED4C22] text-white shadow-2xl mb-8">
+                <step.Icon className="w-12 h-12" />
+              </div>
 
-                  {/* Content */}
-                  <div className="bg-white text-gray-800 rounded-xl shadow-md p-4 w-full">
-                    <h4 className="text-base font-semibold mb-1">{step.title}</h4>
-                    <p className="text-sm text-gray-600">{step.desc}</p>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
+              {/* Card */}
+              <div className="bg-[#2B2D2C] text-white rounded-3xl shadow-2xl p-12 w-full md:w-4/5 lg:w-2/3">
+                <h4 className="text-3xl font-bold mb-6">{step.title}</h4>
+                <p className="text-xl text-gray-300 mb-8">{step.desc}</p>
 
-          {/* Software Solutions */}
-          <div>
-            <h3 className="text-xl font-semibold mb-6 text-center">💻 Software Solutions</h3>
-            <div className="space-y-6">
-              {softwareSteps.map((step, idx) => (
-                <motion.div
-                  key={idx}
-                  initial={{ opacity: 0, x: 50 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.5, delay: idx * 0.2 }}
-                  viewport={{ once: true }}
-                  whileHover={{ scale: 1.03, y: -4 }}
-                  className="flex items-start gap-3 cursor-pointer"
-                >
-                  {/* Icon with pulse animation */}
-                  <motion.div
-                    animate={{ scale: [1, 1.15, 1] }}
-                    transition={{ repeat: Infinity, duration: 2 }}
-                    className="flex items-center justify-center w-12 h-12 rounded-full bg-white text-purple-600 shadow-lg flex-shrink-0"
-                  >
-                    <step.Icon className="w-6 h-6" />
-                  </motion.div>
+                {/* Deliverables list */}
+                <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-lg text-gray-200 text-left">
+                  {step.deliverables.map((item, i) => (
+                    <li key={i} className="flex items-start gap-3">
+                      {/* Circle with check */}
+                      <span className="flex items-center justify-center w-7 h-7 rounded-full bg-[#ED4C22] shrink-0 mt-1">
+                        <Check className="w-4 h-4 text-white" />
+                      </span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
 
-                  {/* Content */}
-                  <div className="bg-white text-gray-800 rounded-xl shadow-md p-4 w-full">
-                    <h4 className="text-base font-semibold mb-1">{step.title}</h4>
-                    <p className="text-sm text-gray-600">{step.desc}</p>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
+              {/* Connector line */}
+              {idx < steps.length - 1 && (
+                <div className="absolute top-full left-1/2 -translate-x-1/2 w-1.5 h-20 bg-[#ED4C22]/60"></div>
+              )}
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>

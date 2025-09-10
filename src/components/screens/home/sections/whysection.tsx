@@ -28,11 +28,21 @@ const features = [
 
 export default function WhyChooseUs() {
   return (
-    <section className="py-16 bg-white rounded-xl mt-3 max-w-screen-2xl mx-auto">
+    <section className="py-20 bg-[#2B2D2C] rounded-xl mt-6 max-w-screen-2xl mx-auto">
       <div className="max-w-6xl mx-auto px-6 text-center">
-        <h2 className="text-3xl font-bold text-gray-900 mb-12">
-          Why Choose Us
+        {/* Main Heading */}
+        <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-4">
+          Why <span className="text-[#ED4C22]">Choose Us</span>
         </h2>
+
+        {/* Subheading */}
+        <p className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-12">
+          As your trusted IT partner, we deliver scalable, secure, and
+          innovative solutions that empower your business to grow in the digital
+          world.
+        </p>
+
+        {/* Features Grid */}
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {features.map((feature, idx) => (
             <motion.div
@@ -41,16 +51,21 @@ export default function WhyChooseUs() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: idx * 0.2 }}
               viewport={{ once: true }}
-              className="group bg-gray-50 hover:bg-black p-6 rounded-2xl shadow 
-                 transition-transform duration-300 hover:-translate-y-6 hover:shadow-2xl"
+              className="group bg-white p-8 rounded-2xl shadow-md border 
+                transition-all duration-300  hover:shadow-2xl hover:bg-[#ED4C22]"
             >
-              <feature.Icon className="mx-auto mb-4 h-12 w-12 text-purple-600   animate-bounce" />
+              {/* Icon */}
+              <div className="flex items-center justify-center w-16 h-16 mx-auto rounded-full bg-[#ED4C22]/10 group-hover:bg-white mb-6 transition-colors duration-300">
+                <feature.Icon className="h-8 w-8 text-[#ED4C22] group-hover:text-[#2B2D2C]" />
+              </div>
 
-              <h3 className="text-lg font-semibold text-gray-900 group-hover:text-white">
+              {/* Title */}
+              <h3 className="text-xl font-semibold text-[#2B2D2C] mb-2 group-hover:text-white transition-colors duration-300">
                 {feature.title}
               </h3>
 
-              <p className="text-gray-600 mt-2 group-hover:text-gray-200">
+              {/* Description */}
+              <p className="text-gray-600 group-hover:text-white leading-relaxed transition-colors duration-300">
                 {feature.desc}
               </p>
             </motion.div>
