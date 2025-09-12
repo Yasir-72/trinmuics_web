@@ -16,9 +16,9 @@ const codingLanguages = [
 
 export default function CodingLanguagesScroll() {
   return (
-    <section className="py-4 rounded-xl mt-6 bg-white">
+    <section className="py-4 rounded-xl mt-6 bg-white max-w-screen-2xl mx-auto">
       {/* Title */}
-      <h2 className="text-center text-xl font-semibold text-gray-800 mb-3">
+      <h2 className="text-center text-xl font-semibold text-gray-800 mb-3 ">
         Languages We Offer
       </h2>
 

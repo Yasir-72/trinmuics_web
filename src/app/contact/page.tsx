@@ -3,8 +3,8 @@ import ContractScreen from "@/components/screens/contactus/view/contactscreen"; 
 
 export default function Page() {
   return (
-    <div>
+    <>
       <ContractScreen />
-    </div>
+    </>
   );
 }

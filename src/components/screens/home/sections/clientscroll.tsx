@@ -11,7 +11,7 @@ const clients = [
 
 export default function ClientScroll() {
   return (
-    <section className="py-6 rounded-xl mt-3 bg-white px-10">
+    <section className="py-6 rounded-xl mt-3 bg-white px-10 max-w-screen-2xl mx-auto">
       {/* Title */}
       <h2 className="text-center text-2xl font-bold text-gray-900 mb-3">
         Our Clients

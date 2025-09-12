@@ -64,59 +64,59 @@ export default function Testimonials() {
   );
 
   return (
-        <section className="py-16 bg-white rounded-xl mt-3">
-
-    <div className="bg-white text-black py-12 px-6 rounded-lg">
-      <div className="grid md:grid-cols-2 gap-6">
-        <AnimatePresence mode="wait">
-          {visibleTestimonials.map((t) => (
-            <motion.div
-              key={t.name}
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -30 }}
-              transition={{ duration: 0.5 }}
-              className="p-6 rounded-2xl border shadow-md bg-purple-50"
-            >
-              <div className="flex items-center gap-3 mb-4">
-              
-<Image
-  src={t.logo}
-  alt={`${t.company} logo`}
-  width={40}
-  height={40}
-  className="w-10 h-10 rounded-md object-contain"
-/>
-                <div>
-                  <h3 className="text-lg font-bold text-purple-700">{t.name}</h3>
-                  <p className="text-sm text-gray-600">{t.company}</p>
+    <section className="py-16 bg-white rounded-xl mt-3 max-w-screen-2xl mx-auto">
+      <div className="bg-white text-black py-12 px-6 rounded-lg">
+        <div className="grid md:grid-cols-2 gap-6">
+          <AnimatePresence mode="wait">
+            {visibleTestimonials.map((t) => (
+              <motion.div
+                key={t.name}
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -30 }}
+                transition={{ duration: 0.5 }}
+                className="p-6 rounded-2xl border shadow-md bg-purple-50"
+              >
+                <div className="flex items-center gap-3 mb-4">
+                  <Image
+                    src={t.logo}
+                    alt={`${t.company} logo`}
+                    width={40}
+                    height={40}
+                    className="w-10 h-10 rounded-md object-contain"
+                  />
+                  <div>
+                    <h3 className="text-lg font-bold text-purple-700">
+                      {t.name}
+                    </h3>
+                    <p className="text-sm text-gray-600">{t.company}</p>
+                  </div>
                 </div>
-              </div>
-              <p className="text-base">{t.text}</p>
-            </motion.div>
-          ))}
-        </AnimatePresence>
-      </div>
+                <p className="text-base">{t.text}</p>
+              </motion.div>
+            ))}
+          </AnimatePresence>
+        </div>
 
-      {/* Navigation */}
-      <div className="flex items-center justify-center gap-4 mt-8">
-        <button
-          onClick={handlePrev}
-          className="p-3 rounded-full bg-purple-600 text-white hover:bg-purple-700 transition"
-        >
-          <ArrowLeft size={20} />
-        </button>
-        <span className="text-sm font-semibold">
-          {page + 1} / {totalPages}
-        </span>
-        <button
-          onClick={handleNext}
-          className="p-3 rounded-full bg-purple-600 text-white hover:bg-purple-700 transition"
-        >
-          <ArrowRight size={20} />
-        </button>
+        {/* Navigation */}
+        <div className="flex items-center justify-center gap-4 mt-8">
+          <button
+            onClick={handlePrev}
+            className="p-3 rounded-full bg-purple-600 text-white hover:bg-purple-700 transition"
+          >
+            <ArrowLeft size={20} />
+          </button>
+          <span className="text-sm font-semibold">
+            {page + 1} / {totalPages}
+          </span>
+          <button
+            onClick={handleNext}
+            className="p-3 rounded-full bg-purple-600 text-white hover:bg-purple-700 transition"
+          >
+            <ArrowRight size={20} />
+          </button>
+        </div>
       </div>
-    </div>
     </section>
   );
 }
