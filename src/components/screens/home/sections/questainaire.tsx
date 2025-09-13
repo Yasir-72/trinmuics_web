@@ -84,15 +84,23 @@ export default function FAQSection() {
                 >
                   <button
                     onClick={() => toggleFAQ(index)}
-                    className="w-full flex justify-between items-center p-5 bg-white hover:bg-orange-50 transition"
+                    className="w-full flex justify-between items-center p-5 bg-[#2B2D2C] transition"
                   >
-                    <span className="font-semibold text-gray-900 text-left text-lg">
+                    <span className="font-semibold text-white text-left text-lg">
                       {faq.question}
                     </span>
                     {openIndex === index ? (
-                      <ChevronUp className="text-[#ED4C22]" />
+                      <ChevronUp
+                        className="text-[#ED4C22]"
+                        size={32}
+                        strokeWidth={3}
+                      />
                     ) : (
-                      <ChevronDown className="text-[#ED4C22]" />
+                      <ChevronDown
+                        className="text-[#ED4C22] "
+                        size={28}
+                        strokeWidth={3}
+                      />
                     )}
                   </button>
 
@@ -106,7 +114,7 @@ export default function FAQSection() {
                         transition={{ duration: 0.35, ease: "easeInOut" }}
                         className="overflow-hidden"
                       >
-                        <div className="p-5 bg-gradient-to-r from-orange-50 to-white text-gray-700 border-t border-gray-100">
+                        <div className="p-5 bg-[#2B2D2C] text-white border-t border-gray-500">
                           {faq.answer}
                         </div>
                       </motion.div>

@@ -4,6 +4,7 @@ import { Montserrat } from "next/font/google";
 import "./globals.css";
 import Header from "../components/layout/header";
 import Footer from "@/components/layout/footer";
+import CtaBanner from "@/components/layout/cta";
 // import SplashScreen from "@/components/layout/splashscreen"; // ✅ Import Splash Screen
 // import { useEffect, useState } from "react";
 
@@ -38,6 +39,7 @@ export default function RootLayout({
           <>
             <Header />
             {children}
+            <CtaBanner/>
             <Footer />
           </>
         {/* )} */}
