@@ -1,7 +1,6 @@
-// components/FAQSection.tsx
 "use client";
 import { useState } from "react";
-import { ChevronDown, ChevronUp } from "lucide-react";
+import { ChevronDown, ChevronUp, HelpCircle } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 
@@ -11,53 +10,53 @@ const faqs = [
       "How do we get started, and what do you need from us to begin the website design process?",
     answer:
       "We begin by understanding your requirements, goals, and preferred design style. Once we gather the details, we create a project plan tailored to your startup’s needs.",
-    image: "/images/faq-start.png",
+    image: "/images/start-process.png",
   },
   {
     question:
       "What makes web design for startups different from other website design services?",
     answer:
       "Startup web design focuses on fast, scalable, and cost-effective solutions tailored for growth, lean budgets, and quick market launch.",
-    image: "/images/faq-startup.png",
+    image: "/images/startup-web.png",
   },
   {
     question: "What makes your web design services suitable for startups?",
     answer:
       "We specialize in lean MVP development, agile design, and rapid delivery while maintaining professional polish and long-term scalability.",
-    image: "/images/faq-suitable.png",
+    image: "/images/mvp-solution.png",
   },
   {
     question:
       "How do you make a startup website match a startup's brand and vision?",
     answer:
       "We work closely with your brand guidelines, vision, and mission to ensure the website reflects your identity while engaging your target audience.",
-    image: "/images/faq-brand.png",
+    image: "/images/brand-vision.png",
   },
   {
     question:
       "Can you help clients with branding and logo design as part of the web design process?",
     answer:
       "Yes! Our creative team can design logos, branding assets, and UI/UX that align with your business identity and market positioning.",
-    image: "/images/faq-branding.png",
+    image: "/images/branding.png",
   },
 ];
 
 export default function FAQSection() {
-  const [openIndex, setOpenIndex] = useState<number | null>(0);
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   const toggleFAQ = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
   };
 
   return (
-    <section className="py-20 bg-white mt-6  rounded-xl max-w-screen-2xl mx-auto">
+    <section className="py-20 bg-white rounded-2xl max-w-screen-2xl mx-auto mt-6">
       <div className="px-6 lg:px-12">
-        <div className="max-w-6xl mx-auto">
+        <div className=" mx-auto">
           {/* Heading */}
           <div className="text-center mb-14">
             <h2 className="text-3xl md:text-5xl font-extrabold text-black">
               Got Questions?{" "}
-              <span className="text-orange-500">We’ve Got Answers.</span>
+              <span className="text-[#ED4C22]">We’ve Got Answers.</span>
             </h2>
             <p className="mt-5 text-lg text-gray-600 max-w-2xl mx-auto">
               Explore our most frequently asked questions to find clarity about
@@ -67,7 +66,7 @@ export default function FAQSection() {
           </div>
 
           {/* Grid */}
-          <div className="grid md:grid-cols-2 gap-12 items-start">
+          <div className="grid md:grid-cols-2 gap-20 items-center">
             {/* Left - Accordion */}
             <div>
               {faqs.map((faq, index) => (
@@ -91,9 +90,9 @@ export default function FAQSection() {
                       {faq.question}
                     </span>
                     {openIndex === index ? (
-                      <ChevronUp className="text-orange-500" />
+                      <ChevronUp className="text-[#ED4C22]" />
                     ) : (
-                      <ChevronDown className="text-orange-500" />
+                      <ChevronDown className="text-[#ED4C22]" />
                     )}
                   </button>
 
@@ -117,23 +116,41 @@ export default function FAQSection() {
               ))}
             </div>
 
-            {/* Right - Dynamic Image */}
+            {/* Right - Answer or Placeholder */}
             <motion.div
-              key={openIndex} // re-render image when index changes
-              initial={{ opacity: 0, x: 40 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -40 }}
+              key={openIndex !== null ? openIndex : "default"}
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="flex justify-center"
+              className="flex justify-center items-center "
             >
-              {openIndex !== null && (
-                <Image
-                  src={faqs[openIndex].image}
-                  alt={faqs[openIndex].question}
-                  width={600}
-                  height={450}
-                  className="rounded-2xl shadow-xl w-full max-w-md object-cover border-4 border-orange-500"
-                />
+              {openIndex !== null ? (
+                <div className="p-8 bg-[#2B2D2C] rounded-2xl shadow-xl text-white max-w-md w-full">
+                  <div className="relative w-full h-48 mb-6 rounded-lg overflow-hidden">
+                    <Image
+                      src={faqs[openIndex].image}
+                      alt={faqs[openIndex].question}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <h3 className="text-xl font-bold text-[#ED4C22] mb-4">
+                    {faqs[openIndex].question}
+                  </h3>
+                  <p className="text-lg leading-relaxed">
+                    {faqs[openIndex].answer}
+                  </p>
+                </div>
+              ) : (
+                <div className="flex flex-col items-center justify-center p-12 bg-gradient-to-br from-orange-500 to-black rounded-2xl shadow-lg text-center text-white max-w-md w-full">
+                  <HelpCircle className="w-16 h-16 mb-6 text-white opacity-90" />
+                  <h3 className="text-2xl font-bold mb-3">Explore Our FAQs</h3>
+                  <p className="text-lg text-gray-200">
+                    Select a question from the left to view detailed insights
+                    here. We make it easy to understand our process, services,
+                    and value.
+                  </p>
+                </div>
               )}
             </motion.div>
           </div>
