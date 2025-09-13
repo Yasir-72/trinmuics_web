@@ -4,7 +4,7 @@ import React from "react";
 
 export default function HeroSection() {
   return (
-    <section className="bg-white px-6 md:px-12 lg:px-16 py-12  rounded-xl max-w-screen-2xl mx-auto">
+    <section className="bg-white px-4 md:px-12 lg:px-16 py-12 rounded-2xl max-w-screen-2xl mx-auto">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         {/* Left Content */}
         <div className="lg:col-span-6 w-full max-w-xl mx-auto lg:mx-0">

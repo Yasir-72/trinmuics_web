@@ -6,62 +6,70 @@ export default function CaseStudies() {
     {
       title: "E-Commerce Website",
       description:
-        "Built a scalable e-commerce platform with real-time inventory, secure payments, and modern UI/UX.",
+        "Built a scalable e-commerce platform with real-time inventory, secure payments, and a modern UI/UX that improved customer engagement and boosted sales conversions.",
       technologies: "Next.js, Tailwind CSS, Node.js, MongoDB",
-      image: "/case-study/ecommerce.png",
+      image: "/images/software-hardware.png",
     },
     {
       title: "Portfolio Website",
       description:
-        "Designed a sleek personal portfolio with animations, responsive design, and SEO optimization.",
+        "Designed a sleek personal portfolio with animations, responsive layouts, and SEO optimization — helping clients showcase their skills and land more opportunities.",
       technologies: "Next.js, Tailwind CSS, Framer Motion",
-      image: "/case-study/portfolio.png",
+      image: "/images/Aboutus.jpg",
     },
     {
       title: "SaaS Dashboard",
       description:
-        "Developed a SaaS dashboard for analytics and reporting with authentication and role management.",
+        "Developed a SaaS dashboard for analytics and reporting with authentication, role management, and real-time charts — empowering businesses with actionable insights.",
       technologies: "React, Next.js, Tailwind CSS, Firebase",
-      image: "/case-study/saas.png",
+      image: "/images/software-hardware.png",
     },
-  
   ];
 
   return (
-    <section className="py-6 mt-3 px-6 md:px-10 bg-white rounded-xl max-w-screen-2xl mx-auto">
+    <section className="py-20 px-4 md:px-12 bg-[#2B2D2C] rounded-2xl mt-6 max-w-screen-2xl mx-auto">
       {/* Heading */}
-      <h2 className="text-3xl font-bold text-center mb-8 text-purple-600">
-        Case Studies
-      </h2>
+      <div className="text-center mb-14">
+        <h2 className="text-4xl font-bold text-white">Case <span className="text-[#ED4C22]">Studies</span></h2>
+        <p className="mt-3 text-lg text-gray-300 max-w-2xl mx-auto">
+          Explore some of our recent projects where we combined creativity,
+          technology, and strategy to deliver results that matter.
+        </p>
+      </div>
 
       {/* List */}
-      <div className="space-y-6 overflow-y-auto pr-2">
+      <div className="space-y-10">
         {caseStudies.map(({ title, description, technologies, image }, i) => (
           <div
             key={i}
-            className="p-6 border border-purple-200 rounded-xl shadow-sm 
-                       transition-all duration-300 hover:shadow-lg hover:border-purple-500"
+            className="p-8 rounded-2xl bg-[#1F2020] shadow-lg  
+                       transition-all duration-300 hover:shadow-orange-500/30 hover:scale-[1.02]"
           >
-            <div className="grid gap-6 md:grid-cols-3">
+            <div className="grid gap-8 md:grid-cols-3 items-center">
               {/* Text */}
-              <div className="col-span-2 space-y-10 w-3/4">
-                <h3 className="text-3xl font-semibold text-purple-700">{title}</h3>
-                <p className="text-md text-gray-700 leading-relaxed">
+              <div className="col-span-2 space-y-5">
+                <h3 className="text-2xl font-semibold text-[#ED4C22]">
+                  {title}
+                </h3>
+                <p className="text-base text-gray-300 leading-relaxed">
                   {description}
                 </p>
-                <span className="inline-block px-3 py-1 text-md font-medium text-purple-600 bg-purple-50 rounded-lg">
-                  Technologies: {technologies}
+                <span
+                  className="inline-block px-4 py-2 text-sm font-medium 
+                                text-white bg-[#ED4C22] rounded-lg shadow-md"
+                >
+                  {technologies}
                 </span>
               </div>
 
               {/* Image */}
-              <div className="flex items-center justify-center border border-purple-600 rounded-lg overflow-hidden">
+              <div className="flex items-center justify-center rounded-xl overflow-hidden">
                 <Image
                   src={image}
                   alt={title}
-                  width={220}
-                  height={140}
-                  className="object-cover transition-transform duration-300 hover:scale-105"
+                  width={450}
+                  height={100}
+                  className="object-cover transition-transform duration-500 hover:scale-110"
                 />
               </div>
             </div>

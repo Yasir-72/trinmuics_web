@@ -52,10 +52,10 @@ const steps = [
 
 export default function HowItWorks() {
   return (
-    <section className="py-24 bg-white max-w-screen-2xl rounded-xl mt-6 mx-auto">
-      <div className="max-w-6xl mx-auto px-6">
+    <section className="py-24 bg-white max-w-screen-2xl rounded-2xl mt-6 mx-auto">
+      <div className="max-w-6xl mx-auto px-4">
         <h2 className="text-5xl font-extrabold text-center mb-20 text-[#2B2D2C]">
-          How It Works
+          How It <span className="text-[#ED4C22]">Works</span>
         </h2>
 
         <div className="space-y-20">
@@ -74,8 +74,8 @@ export default function HowItWorks() {
               </div>
 
               {/* Card */}
-              <div className="bg-[#2B2D2C] text-white rounded-3xl shadow-2xl p-12 w-full md:w-4/5 lg:w-2/3">
-                <h4 className="text-3xl font-bold mb-6">{step.title}</h4>
+              <div className="bg-[#2B2D2C] text-white rounded-3xl shadow-2xl py-12 px-5 w-full md:w-4/5 lg:w-2/3">
+                <h4 className="text-3xl font-bold mb-6">{step.title}</h4> 
                 <p className="text-xl text-gray-300 mb-8">{step.desc}</p>
 
                 {/* Deliverables list */}
@@ -84,7 +84,7 @@ export default function HowItWorks() {
                     <li key={i} className="flex items-start gap-3">
                       {/* Circle with check */}
                       <span className="flex items-center justify-center w-7 h-7 rounded-full bg-[#ED4C22] shrink-0 mt-1">
-                        <Check className="w-4 h-4 text-white" />
+                        <Check className="w-5 h-5 text-white" />
                       </span>
                       <span>{item}</span>
                     </li>

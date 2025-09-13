@@ -28,8 +28,8 @@ const features = [
 
 export default function WhyChooseUs() {
   return (
-    <section className="py-20 bg-[#2B2D2C] rounded-xl mt-6 max-w-screen-2xl mx-auto">
-      <div className="max-w-6xl mx-auto px-6 text-center">
+    <section className="py-20 bg-[#2B2D2C] rounded-2xl mt-6 max-w-screen-2xl mx-auto">
+      <div className="max-w-6xl mx-auto px-4 text-center">
         {/* Main Heading */}
         <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-4">
           Why <span className="text-[#ED4C22]">Choose Us</span>

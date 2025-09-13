@@ -1,5 +1,7 @@
 "use client";
+import { useState } from "react";
 import Image from "next/image";
+import { ShieldCheck, Users, Calculator, Headphones } from "lucide-react";
 
 const clients = [
   { name: "Cisco", src: "/Clients/Cisco.png" },
@@ -9,68 +11,114 @@ const clients = [
   { name: "Noviscient", src: "/Clients/noviscient.png" },
 ];
 
+const features = [
+  {
+    title: "36 Standards of Quality",
+    desc: "We follow 36 rigorous standards across design, development, testing, and delivery to guarantee world-class quality in every project, ensuring nothing is left to chance.",
+    Icon: ShieldCheck,
+  },
+  {
+    title: "Top 3% Talent",
+    desc: "Our team is handpicked from the top 3% of global talent, bringing unmatched expertise, innovation, and excellence. Every project benefits from skilled minds and proven experience.",
+    Icon: Users,
+  },
+  {
+    title: "100% Estimate Accuracy",
+    desc: "We deliver projects on time and within budget, with 100% estimation accuracy. No hidden surprises, no delays — only complete transparency and predictable outcomes.",
+    Icon: Calculator,
+  },
+  {
+    title: "24/7 Dedicated Support",
+    desc: "Our commitment doesn’t end at delivery. We provide round-the-clock dedicated support and proactive monitoring to keep your business running smoothly, without interruptions.",
+    Icon: Headphones,
+  },
+];
+
 export default function ClientScroll() {
+  const [activeFeature, setActiveFeature] = useState(features[0]);
+
   return (
-    <section className="py-6 rounded-xl mt-3 bg-white px-10 max-w-screen-2xl mx-auto">
+    <section className="py-20 rounded-2xl mt-6 bg-white max-w-screen-2xl mx-auto px-6 md:px-12">
       {/* Title */}
-      <h2 className="text-center text-2xl font-bold text-gray-900 mb-3">
-        Our Clients
-      </h2>
+      <div className="text-center mb-12">
+        <h2 className="text-5xl font-bold text-[#2B2D2C]">
+          Trusted by <span className="text-[#ED4C22]">Leading Brands</span>
+        </h2>
+        <p className="mt-3 text-lg text-gray-600 max-w-2xl mx-auto">
+          We’ve partnered with some of the most innovative companies worldwide,
+          delivering excellence and innovation in every project.
+        </p>
+      </div>
 
-      {/* Gradient Background with gray-white-purple */}
-      <div className="relative w-full overflow-hidden h-12 flex items-center rounded-full bg-gradient-to-r from-gray-800 via-purple-500 to-white">
-        {/* Fading edges */}
-        <div className="pointer-events-none absolute left-0 top-0 h-full w-24 bg-gradient-to-r from-gray-900/60 via-gray-700/30 to-transparent z-10" />
-        <div className="pointer-events-none absolute right-0 top-0 h-full w-24 bg-gradient-to-l from-gray-900/60 via-gray-700/30 to-transparent z-10" />
-
-        {/* Scrolling Logos */}
-        <div className="flex animate-scroll gap-10 relative z-10">
+      {/* Scrolling Logos Section */}
+      <div className="relative w-full overflow-hidden py-6">
+        <div className="flex animate-scroll gap-6">
           {[...clients, ...clients, ...clients].map((client, idx) => (
-            <div key={idx} className="flex-shrink-0 flex items-center">
+            <div
+              key={idx}
+              className="flex-shrink-0 w-48 h-28 flex items-center justify-center rounded-2xl bg-[#2B2D2C] shadow-lg hover:shadow-orange-500/50 transition-transform duration-300 hover:scale-105"
+            >
               <Image
                 src={client.src}
                 alt={client.name}
-                width={70}
-                height={30}
-                className="opacity-90 hover:opacity-100 hover:scale-110 transition-transform duration-300"
+                width={120}
+                height={60}
+                className="object-contain"
               />
             </div>
           ))}
         </div>
       </div>
 
-      {/* Feature Section */}
-      <div className="grid md:grid-cols-2 gap-4 mt-8">
-        {/* Left Column with Cards */}
-        <div className="grid grid-cols-2 gap-4">
-          <div className="p-4 rounded-lg bg-gray-100 text-purple-700 shadow-md hover:shadow-purple-400/70 transition-transform duration-300">
-            <h3 className="font-semibold">36 Standards of Quality</h3>
-          </div>
-          <div className="p-4 rounded-lg bg-gray-100 text-purple-700 shadow-md hover:shadow-purple-400/70 transition-transform duration-300">
-            <h3 className="font-semibold">Hiring the top 3% of talent</h3>
-          </div>
-          <div className="col-span-2 p-4 rounded-lg bg-gray-100 text-purple-700 shadow-md hover:shadow-purple-400/70 transition-transform duration-300">
-            <h3 className="font-semibold">100% Estimates Match</h3>
-          </div>
+      {/* Features Section */}
+      <div className="grid md:grid-cols-2 gap-8 mt-16">
+        {/* Left Column - Feature Cards */}
+        <div className="grid grid-cols-2 gap-6">
+          {features.map((feature, idx) => (
+            <div
+              key={idx}
+              onMouseEnter={() => setActiveFeature(feature)}
+              className={`p-6 rounded-xl flex flex-col items-center justify-center text-center cursor-pointer transition-all duration-300 shadow-md 
+                ${
+                  activeFeature.title === feature.title
+                    ? "bg-[#2B2D2C] text-white shadow-orange-500/40 scale-105"
+                    : "bg-gray-100 text-[#2B2D2C] hover:bg-[#2B2D2C]/80 hover:text-white"
+                }`}
+            >
+              {/* Icon Circle */}
+              <div
+                className={`w-14 h-14 mb-3 flex items-center justify-center rounded-full transition-colors duration-300 
+                ${
+                  activeFeature.title === feature.title
+                    ? "bg-[#ED4C22] text-white"
+                    : "bg-white text-[#ED4C22]"
+                }`}
+              >
+                <feature.Icon className="w-7 h-7" />
+              </div>
+              <h3 className="font-bold text-lg">{feature.title}</h3>
+            </div>
+          ))}
         </div>
 
-        {/* Right Column */}
-        <div className="p-6 rounded-lg bg-gray-100 text-purple-700 shadow-md hover:shadow-purple-400/70 transition-transform duration-300">
-          <h3 className="text-xl font-bold mb-2">36 Standards of Quality</h3>
-          <p className="text-sm leading-relaxed">
-            At our company, we adhere to a comprehensive set of 36 rigorous
-            standards of quality, ensuring that every aspect of our software
-            development process is executed with precision and excellence.
+        {/* Right Column - Active Description */}
+        <div className="p-8 rounded-xl bg-[#2B2D2C] text-white shadow-md transition-all duration-500">
+          <h3 className="text-3xl font-bold mb-4 text-[#ED4C22]">
+            {activeFeature.title}
+          </h3>
+          <p className="text-xl leading-relaxed text-gray-200">
+            {activeFeature.desc}
           </p>
           <a
             href="#"
-            className="text-purple-700 font-semibold text-sm mt-3 inline-block hover:underline"
+            className="text-[#ED4C22] font-semibold text-xl mt-5 inline-block hover:underline"
           >
             Learn More →
           </a>
         </div>
       </div>
 
+      {/* Logo Scroll Animation */}
       <style jsx>{`
         @keyframes scroll {
           0% {
@@ -82,7 +130,7 @@ export default function ClientScroll() {
         }
         .animate-scroll {
           display: flex;
-          animation: scroll 15s linear infinite;
+          animation: scroll 20s linear infinite;
           width: max-content;
         }
       `}</style>

@@ -28,7 +28,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         suppressHydrationWarning={true}
-        className={`${montserrat.variable} antialiased bg-[#DDE2E5] px-6 md:px-10`}
+        className={`${montserrat.variable} antialiased bg-[#DDE2E5] px-2 md:px-10`}
       >
         {/* {loading ? (
           // <SplashScreen /> // ✅ Show splash screen first
