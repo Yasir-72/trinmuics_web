@@ -1,81 +1,89 @@
 "use client";
 
-import { FaRocket, FaMobileAlt, FaPaintBrush } from "react-icons/fa";
+import { section } from "framer-motion/client";
+import { Code2, Smartphone, Palette } from "lucide-react";
 import Image from "next/image";
 
 export default function ServiceHeroSection() {
   return (
-    <section className="bg-white text-gray-900 py-20  mt-3">
-      <div className="container mx-auto px-6 md:px-12 lg:px-20 grid lg:grid-cols-2 gap-12 items-center">
-        
-        {/* Left Content */}
-        <div>
-          {/* Heading */}
-          <h2 className="text-4xl md:text-5xl font-extrabold leading-tight mb-10">
-            Custom Software <br />
-            <span className="text-purple-600">Development Services</span>
-          </h2>
+    <>
+      <section className="bg-white py-16 px-4 sm:px-6 md:px-12 lg:px-20 max-w-screen-2xl mx-auto rounded-2xl overflow-hidden">
+        <div className=" mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          {/* Left Content */}
+          <div className="space-y-8 text-center lg:text-left">
+            <h2 className="text-4xl md:text-5xl font-extrabold leading-tight  bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">
+              Custom Software <br />
+              <span className="bg-gradient-to-r from-orange-600 to-red-600 bg-clip-text text-transparent ">
+                Development Solutions
+              </span>
+            </h2>
 
-          {/* Services List */}
-          <div className="space-y-8">
-            {/* Service 1 */}
-            <div className="flex items-start space-x-4">
-              <FaRocket className="text-3xl text-purple-600 mt-1" />
-              <div>
-                <h3 className="text-xl font-semibold text-gray-800">
-                  Startup Development Services
+            <p className="text-gray-600 text-lg leading-relaxed max-w-2xl mx-auto lg:mx-0">
+              At <span className="font-semibold text-[#ED4C22]">Trinumics</span>
+              , we build scalable, user-friendly, and innovative digital
+              solutions tailored for startups, enterprises, and growing
+              businesses. From web to mobile, our solutions are designed to fuel
+              impact and growth.
+            </p>
+
+            {/* Services */}
+            <div className="grid sm:grid-cols-2 gap-6">
+              <div className="group bg-gradient-to-r from-gray-800 to-gray-900 text-white rounded-xl p-6 shadow-lg hover:scale-105 transition-transform">
+                <div className="w-16 h-16 rounded-xl bg-gradient-to-r from-orange-500 to-red-600 flex items-center justify-center text-white mb-6 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-3">
+                  <Code2 className="w-10 h-10" />
+                </div>
+                <h3 className="text-xl font-black mb-2">
+                  Startup Development
                 </h3>
-                <p className="text-gray-600 text-sm">
-                  Helping startups build scalable, reliable, and modern applications.
+                <p className="text-sm text-gray-300">
+                  Scalable, reliable, and modern applications crafted for rapid
+                  growth.
+                </p>
+              </div>
+
+              <div className=" bg-gradient-to-r from-gray-800 to-gray-900 text-white rounded-xl p-6 shadow-lg hover:scale-105 transition-transform">
+                <div className="w-16 h-16 rounded-xl bg-gradient-to-r from-orange-500 to-red-600 flex items-center justify-center text-white mb-6 transform transition-transform duration-500 group-hover:scale-110 group-hover:rotate-3">
+                  <Smartphone className="w-10 h-10 text-white" />
+                </div>
+                <h3 className="text-xl font-black mb-2">Mobile Apps</h3>
+                <p className="text-sm text-gray-300">
+                  Seamless Android & iOS apps with engaging user experiences.
+                </p>
+              </div>
+
+              <div className=" bg-gradient-to-r from-gray-800 to-gray-900  text-white rounded-xl p-6 shadow-lg hover:scale-105 transition-transform sm:col-span-2">
+                <div className="w-16 h-16 rounded-xl bg-gradient-to-r from-orange-500 to-red-600 flex items-center justify-center text-white mb-6 transform transition-transform duration-500 group-hover:scale-110 group-hover:rotate-3">
+                  <Palette className="w-10 h-10 text-white" />
+                </div>
+                <h3 className="text-xl font-black mb-2">UI/UX Design</h3>
+                <p className="text-sm text-gray-300">
+                  Modern, user-focused designs that combine beauty with
+                  functionality.
                 </p>
               </div>
             </div>
 
-            {/* Service 2 */}
-            <div className="flex items-start space-x-4">
-              <FaMobileAlt className="text-3xl text-purple-600 mt-1" />
-              <div>
-                <h3 className="text-xl font-semibold text-gray-800">
-                  Android and iOS Development
-                </h3>
-                <p className="text-gray-600 text-sm">
-                  Creating high-quality mobile apps with seamless user experiences.
-                </p>
-              </div>
-            </div>
-
-            {/* Service 3 */}
-            <div className="flex items-start space-x-4">
-              <FaPaintBrush className="text-3xl text-purple-600 mt-1" />
-              <div>
-                <h3 className="text-xl font-semibold text-gray-800">
-                  Custom UI/UX Design Services
-                </h3>
-                <p className="text-gray-600 text-sm">
-                  Designing creative, modern, and user-friendly interfaces.
-                </p>
-              </div>
+            {/* CTA */}
+            <div className="flex justify-center lg:justify-start">
+              <button className="mt-6 px-8 py-3 bg-[#ED4C22] hover:bg-[#2B2D2C] hover:text-white text-white font-semibold rounded-full shadow-md transition-all">
+                Get an Estimate →
+              </button>
             </div>
           </div>
 
-          {/* CTA Button */}
-          <button className="mt-10 px-8 py-3 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-lg shadow-md transition">
-            Get an Estimate
-          </button>
+          {/* Right Image */}
+          <div className="relative flex justify-center lg:justify-end">
+            <div className="absolute -z-10 bg-[#ED4C22]/20 w-72 h-72 rounded-full blur-3xl"></div>
+            <Image
+              src="/services-image.jpg"
+              alt="Service Illustration"
+              width={550}
+              height={450}
+              className="rounded-2xl shadow-2xl border-4 border-[#2B2D2C]/10 object-cover max-w-full h-auto"
+            />
+          </div>
         </div>
-
-        {/* Right Side Image */}
-        <div className="relative flex justify-center">
-          <div className="absolute -z-10 bg-purple-200 w-60 h-60 rounded-lg rotate-6"></div>
-          <Image
-            src="/services-image.jpg" // Replace with your actual image
-            alt="Service Illustration"
-            width={500}
-            height={400}
-            className="rounded-lg shadow-lg"
-          />
-        </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }

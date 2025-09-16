@@ -1,4 +1,5 @@
 // sections/Methodologies.tsx
+"use client";
 import Image from "next/image";
 
 const methodologies = [
@@ -7,18 +8,21 @@ const methodologies = [
     description:
       "We validate your product ideas early with market research, competitor analysis, and quick prototyping.",
     image: "/images/idea.png",
+    style: "lg:col-span-2", // Wide
   },
   {
     title: "UX Research",
     description:
       "We perform deep UX research to understand user behavior, pain points, and expectations for your product.",
     image: "/images/ux.png",
+    style: "lg:row-span-2",
   },
   {
     title: "MVP Development",
     description:
       "We build MVPs quickly so you can test, iterate, and raise investment faster.",
     image: "/images/mvp.png",
+    style: "lg:row-span-2", // Tall
   },
   {
     title: "Agile Iterations",
@@ -29,67 +33,75 @@ const methodologies = [
   {
     title: "A/B Testing",
     description:
-      "We love data-driven decisions, so we utilize A/B Testing. This allows us to compare different versions of a solution and identify which one delivers the best user engagement and results.",
-    image: "/images/abtesting.png", // 🔑 replace with your actual icon
+      "We utilize A/B Testing to compare versions and identify which delivers the best engagement and results.",
+    image: "/images/abtesting.png",
+    style: "lg:col-span-2", // Wide
   },
   {
     title: "CI/CD Pipeline",
     description:
-      "We implement a Continuous Integration and Continuous Deployment (CI/CD) pipeline that allows for quick updates and reduces errors, keeping your project’s code fresh and ready.",
-    image: "/images/cicd.png", // 🔑 replace with your actual icon
+      "We implement CI/CD pipelines for quick updates and fewer errors, keeping code fresh and reliable.",
+    image: "/images/cicd.png",
   },
   {
-    title: "Manual and Automated Testing",
+    title: "Manual & Automated Testing",
     description:
-      "Quality is our priority! We employ both Manual and Automated Testing. Manual testing catches usability issues, while automated tests quickly identify bugs, ensuring smooth user experience.",
-    image: "/images/testing.png", // 🔑 replace with your actual icon
+      "We employ both Manual and Automated Testing to ensure top quality and bug-free releases.",
+    image: "/images/testing.png",
   },
   {
-    title: "Continuous Monitoring & Feedback",
+    title: "Continuous Monitoring",
     description:
-      "We maintain Continuous Monitoring & Feedback throughout development and maintenance, ensuring necessary adjustments are made and final product meets all requirements.",
-    image: "/images/monitoring.png", // 🔑 replace with your actual icon
+      "We maintain continuous monitoring and feedback loops for constant improvement and reliability.",
+    image: "/images/monitoring.png",
   },
 ];
 
 export default function Methodologies() {
   return (
-    <section className="bg-gray-50 py-16  mt-3">
-      <div className="max-w-6xl mx-auto px-6 text-center">
-        <h2 className="text-4xl font-bold text-gray-900 mb-4">
-          Our Software Development Methodologies
+    <section className="bg-gradient-to-br from-gray-800 to-gray-900 py-16 px-4 sm:px-6 md:px-12 lg:px-20 max-w-screen-2xl mx-auto rounded-2xl mt-6">
+      <div className="max-w-7xl mx-auto  text-center">
+        {/* Heading */}
+        <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-4">
+          Our{" "}
+          <span className="bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">
+            Development Methodologies
+          </span>
         </h2>
-        <p className="text-gray-600 max-w-2xl mx-auto mb-12">
-          We follow the Lean methodology to ensure efficient custom software app
-          development services. Our approach focuses on delivering value fast
-          while minimizing waste. We streamline processes, respond to feedback,
-          and concentrate on what truly matters to our clients.
+        <p className="text-gray-300 max-w-3xl mx-auto mb-16 text-lg">
+          We follow a lean, agile-driven approach to deliver high-quality
+          software quickly. Every step ensures flexibility, innovation, and
+          measurable impact.
         </p>
 
-        {/* Card Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
+        {/* Masonry-like Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 auto-rows-[minmax(250px,auto)] gap-6">
           {methodologies.map((item, index) => (
             <div
               key={index}
-              className="bg-white rounded-2xl shadow-md p-8 hover:shadow-xl transition duration-300"
+              className={`group bg-white rounded-2xl shadow-lg p-8 flex flex-col justify-start transition transform hover:-translate-y-2 hover:shadow-2xl ${item.style}`}
             >
-              {/* Icon / Image */}
-              <div className="w-20 h-20 mx-auto mb-6 relative">
-                <Image
-                  src={item.image}
-                  alt={item.title}
-                  fill
-                  className="object-contain"
-                />
+              {/* Icon */}
+              <div className="w-16 h-16 mb-6 flex items-center justify-center rounded-xl bg-gradient-to-br from-[#ED4C22] to-[#2B2D2C] mx-auto">
+                <div className="relative w-8 h-8">
+                  <Image
+                    src={item.image}
+                    alt={item.title}
+                    fill
+                    className="object-contain"
+                  />
+                </div>
               </div>
 
               {/* Title */}
-              <h3 className="text-xl font-semibold text-gray-800 mb-3">
+              <h3 className="text-xl font-semibold text-[#2B2D2C] mb-3 group-hover:text-[#ED4C22] transition">
                 {item.title}
               </h3>
 
               {/* Description */}
-              <p className="text-gray-600 text-sm">{item.description}</p>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                {item.description}
+              </p>
             </div>
           ))}
         </div>

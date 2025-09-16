@@ -38,7 +38,7 @@ const services = [
 
 export default function ServiceSection() {
   return (
-    <section className="w-full py-20 bg-[#2B2D2C] text-white rounded-2xl mt-6 max-w-screen-2xl mx-auto">
+    <section className="w-full py-20 bg-gradient-to-br from-gray-800 to-gray-900 border-2 border-gray-100 hover:border-gray-300 text-white rounded-2xl mt-6 max-w-screen-2xl mx-auto">
       <div className="mx-auto max-w-7xl px-4">
         {/* Heading */}
         <div className="mb-14 text-center">
@@ -46,7 +46,8 @@ export default function ServiceSection() {
             Our Core IT <span className="text-[#ED4C22]">Services</span>
           </h2>
           <p className="mt-4 text-base md:text-lg text-gray-300 max-w-2xl mx-auto">
-            Solutions engineered to scale with your business and deliver measurable impact.
+            Solutions engineered to scale with your business and deliver
+            measurable impact.
           </p>
         </div>
 

@@ -28,7 +28,7 @@ const features = [
 
 export default function WhyChooseUs() {
   return (
-    <section className="py-20 bg-[#2B2D2C] rounded-2xl mt-6 max-w-screen-2xl mx-auto">
+    <section className="py-20 bg-gradient-to-br from-gray-800 to-gray-900 border-2 border-gray-100 hover:border-gray-300 rounded-2xl mt-6 max-w-screen-2xl mx-auto">
       <div className="max-w-6xl mx-auto px-4 text-center">
         {/* Main Heading */}
         <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-4">

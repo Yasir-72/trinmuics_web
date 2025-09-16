@@ -10,7 +10,7 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#2B2D2C] text-white pt-16 pb-8 relative max-w-screen-2xl mx-auto overflow-hidden rounded-t-2xl px-4 md:px-12">
+    <footer className="bg-gradient-to-br from-gray-800 to-gray-900 text-white pt-16 pb-8 relative max-w-screen-2xl mx-auto overflow-hidden rounded-t-2xl px-4 md:px-12">
       {/* Decorative Overlay */}
       <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none rounded-t-2xl" />
 

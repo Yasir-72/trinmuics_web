@@ -45,9 +45,9 @@ export default function CaseStudies() {
             className="p-8 rounded-2xl bg-[#1F2020] shadow-lg  
                        transition-all duration-300 hover:shadow-orange-500/30 hover:scale-[1.02]"
           >
-            <div className="grid gap-8 md:grid-cols-3 items-center">
+            <div className="grid gap-8 md:grid-cols-2 items-center">
               {/* Text */}
-              <div className="col-span-2 space-y-5">
+              <div className="col-span-1 space-y-5">
                 <h3 className="text-2xl font-semibold text-[#ED4C22]">
                   {title}
                 </h3>
@@ -63,7 +63,7 @@ export default function CaseStudies() {
               </div>
 
               {/* Image */}
-              <div className="flex items-center justify-center rounded-xl overflow-hidden">
+              <div className="flex items-start justify-end rounded-xl overflow-hidden">
                 <Image
                   src={image}
                   alt={title}

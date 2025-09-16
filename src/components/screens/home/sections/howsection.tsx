@@ -74,7 +74,7 @@ export default function HowItWorks() {
               </div>
 
               {/* Card */}
-              <div className="bg-[#2B2D2C] text-white rounded-3xl shadow-2xl py-12 px-5 w-full md:w-4/5 lg:w-2/3">
+              <div className="bg-gradient-to-br from-gray-800 to-gray-900 border-2 border-gray-100 hover:border-gray-300 text-white rounded-3xl shadow-2xl py-12 px-5 w-full md:w-4/5 lg:w-2/3">
                 <h4 className="text-3xl font-bold mb-6">{step.title}</h4> 
                 <p className="text-xl text-gray-300 mb-8">{step.desc}</p>
 

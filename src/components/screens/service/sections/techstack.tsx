@@ -53,51 +53,69 @@ const techStack = [
 
 export default function TechStack() {
   return (
-    <section className="py-16 bg-white text-gray-900  mt-3">
+    <section className="py-16 px-4 sm:px-6 md:px-12 lg:px-20 max-w-screen-2xl mx-auto rounded-2xl mt-6 bg-gradient-to-br from-gray-50 via-white to-gray-50  overflow-hidden">
       <div className="container mx-auto px-6">
         {/* Heading */}
-        <div className="text-center mb-14">
-          <h2 className="text-4xl font-bold mb-4 text-purple-700">
-            Tech Stack We Use
+        <div className="text-center mb-16">
+          <div className="inline-block mb-6">
+            <div className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-6 py-2 text-sm font-bold uppercase tracking-wider rounded-full shadow-lg">
+              Modern Technology
+            </div>
+          </div>
+          <h2 className="text-4xl sm:text-5xl font-extrabold mb-6 text-[#2B2D2C]">
+            Tech Stack  <span className="text-[#ED4C22]">We Use</span>
           </h2>
-          <p className="text-gray-600 max-w-3xl mx-auto">
-            We&apos;re thrilled to offer comprehensive development for Android,
-            iOS, and web applications! Our secure, scalable, high-performance
+          <p className="text-[#2B2D2C]/70 max-w-3xl mx-auto text-lg leading-relaxed">
+            We're thrilled to offer comprehensive development for Android, iOS,
+            and web applications! Our secure, scalable, high-performance
             solutions guarantee smooth integration across all devices.
           </p>
         </div>
 
         {/* Grid - One card per row */}
-        <div className="grid grid-cols-1 gap-10">
+        <div className="grid grid-cols-1 gap-12">
           {techStack.map((item, index) => (
             <div
               key={index}
-              className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center 
-              bg-white rounded-2xl shadow-md p-8 border border-purple-200 
-              max-w-5xl mx-auto w-full
-              transform transition duration-300 hover:scale-[1.02] hover:shadow-xl hover:border-purple-600"
+              className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center 
+              bg-gradient-to-br from-gray-800 to-gray-900 backdrop-blur-sm rounded-3xl shadow-lg p-10 
+               max-w-6xl mx-auto w-full
+              transform transition-all duration-300 hover:scale-[1.02] 
+              hover:shadow-2xl  group"
             >
               {/* Text Section */}
-              <div>
-                <h3 className="text-2xl font-semibold text-purple-700 mb-4">
+              <div className="space-y-6">
+                <h3 className="text-3xl font-bold text-[#ED4C22] mb-6  transition-colors duration-300">
                   {item.title}
                 </h3>
-                <ul className="list-disc pl-6 space-y-2 text-gray-700 text-base">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   {item.points.map((point, i) => (
-                    <li key={i}>{point}</li>
+                    <div
+                      key={i}
+                      className="flex items-center gap-3 p-3 bg-[#ED4C22]/5 rounded-xl border border-[#ED4C22]/10 hover:bg-[#ED4C22]/10 hover:border-[#ED4C22]/30 transition-all duration-300"
+                    >
+                      <div className="w-2.5 h-2.5 bg-[#ED4C22] rounded-full flex-shrink-0"></div>
+                      <span className="text-white text-sm font-medium">
+                        {point}
+                      </span>
+                    </div>
                   ))}
-                </ul>
+                </div>
               </div>
 
               {/* Image Section */}
               <div className="flex justify-center">
-                <div className="w-32 h-32 md:w-40 md:h-40 relative">
-                  <Image
-                    src={item.image}
-                    alt={item.title}
-                    fill
-                    className="object-contain"
-                  />
+                <div className=" group/image">
+                  <div className="w-48 h-48 relative bg-gradient-to-br from-[#ED4C22]/10 to-[#ED4C22]/20 rounded-3xl p-8 border-2 border-[#ED4C22]/30 shadow-inner group-hover/image:scale-110 group-hover/image:rotate-3 transition-all duration-500">
+                    <Image
+                      src={item.image}
+                      alt={item.title}
+                      fill
+                      className="object-contain p-4"
+                    />
+                  </div>
+                  {/* Floating accent elements */}
+                  
                 </div>
               </div>
             </div>

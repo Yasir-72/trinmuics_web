@@ -9,12 +9,11 @@ export default function ServiceScreen() {
   return (
     <>
       <ServiceHeroSection />
-    <ServiceList />
+      <ServiceList />
       <Methodologies />
       <WhyChooseUs />
       <Industries />
       <TechStack />
-
     </>
   );
 }

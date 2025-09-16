@@ -57,9 +57,9 @@ export default function Header() {
         </nav>
 
         {/* CTA */}
-        <button className="hidden md:flex items-center gap-2 bg-[#2B2D2C] hover:bg-amber-700 text-white px-6 py-4 rounded-lg font-medium shadow-md transition-colors duration-200 hover:shadow-lg">
+        <button className="group hidden md:flex items-center gap-2 bg-gradient-to-br from-gray-800 to-gray-900 border-2 border-gray-100 hover:border-gray-300  text-white px-6 py-4 rounded-lg font-medium shadow-md transition-all duration-300 ease-in-out hover:from-orange-500 hover:to-red-600 hover:bg-gradient-to-r  hover:shadow-lg">
           <span className="hidden lg:inline">BOOK A CALL</span>
-          <Phone className="w-5 h-5 text-[#ED4C22] transition-colors group-hover:text-white" />
+          <Phone className="w-5 h-5 text-[#ED4C22] transition-colors duration-300 group-hover:text-white" />
         </button>
 
         {/* Mobile Menu Toggle */}
