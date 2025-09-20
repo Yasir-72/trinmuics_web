@@ -10,7 +10,6 @@ import {
   BarChart3,
   Star,
   ArrowRight,
-  CheckCircle,
 } from "lucide-react";
 
 const methodologies = [

@@ -1,6 +1,5 @@
 "use client";
 
-import React, { useState } from "react";
 import {
   Sparkles,
   Zap,
@@ -9,7 +8,6 @@ import {
   Users,
   Award,
   ArrowRight,
-  Play,
   Building,
   Globe,
 } from "lucide-react";
