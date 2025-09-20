@@ -31,7 +31,7 @@ export default function ServiceHeroSection() {
 
             {/* Services */}
             <div className="grid sm:grid-cols-2 gap-6">
-              <div className="group bg-gradient-to-r from-gray-800 to-gray-900 text-white rounded-xl p-6 shadow-lg hover:scale-105 transition-transform">
+              <div className="group bg-gradient-to-r from-gray-900 to-black  text-white rounded-xl p-6 shadow-lg hover:scale-105 transition-transform">
                 <div className="w-16 h-16 rounded-xl bg-gradient-to-r from-orange-500 to-red-600 flex items-center justify-center text-white mb-6 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-3">
                   <Code2 className="w-10 h-10" />
                 </div>
@@ -42,7 +42,7 @@ export default function ServiceHeroSection() {
                 </p>
               </div>
 
-              <div className=" bg-gradient-to-r from-gray-800 to-gray-900 text-white rounded-xl p-6 shadow-lg hover:scale-105 transition-transform">
+              <div className=" bg-gradient-to-r from-gray-900 to-black text-white rounded-xl p-6 shadow-lg hover:scale-105 transition-transform">
                 <div className="w-16 h-16 rounded-xl bg-gradient-to-r from-orange-500 to-red-600 flex items-center justify-center text-white mb-6 transform transition-transform duration-500 group-hover:scale-110 group-hover:rotate-3">
                   <Smartphone className="w-10 h-10 text-white" />
                 </div>
@@ -52,7 +52,7 @@ export default function ServiceHeroSection() {
                 </p>
               </div>
 
-              <div className=" bg-gradient-to-r from-gray-800 to-gray-900  text-white rounded-xl p-6 shadow-lg hover:scale-105 transition-transform sm:col-span-2">
+              <div className=" bg-gradient-to-r from-gray-900 to-black  text-white rounded-xl p-6 shadow-lg hover:scale-105 transition-transform sm:col-span-2">
                 <div className="w-16 h-16 rounded-xl bg-gradient-to-r from-orange-500 to-red-600 flex items-center justify-center text-white mb-6 transform transition-transform duration-500 group-hover:scale-110 group-hover:rotate-3">
                   <Palette className="w-10 h-10 text-white" />
                 </div>
