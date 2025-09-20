@@ -31,7 +31,7 @@ export default function CtaBanner() {
           <div className="flex-shrink-0">
             <Link href={"/contact"}>
               <button
-                className="px-8 py-4 bg-[#ED4C22] text-white text-lg font-semibold 
+                className="px-8 py-4 bg-gradient-to-r from-[#ED4C22] to-orange-500 text-white text-lg font-semibold 
                 rounded-xl shadow-lg hover:shadow-orange-500/40 hover:scale-105 
                 transition-all duration-300"
               >

@@ -7,7 +7,7 @@ import Image from "next/image";
 export default function ServiceHeroSection() {
   return (
     <>
-      <section className="relative py-20 px-4 md:px-12 lg:px-16 bg-white rounded-3xl max-w-screen-2xl mx-auto overflow-hidden mt-6">
+      <section className="relative py-20 px-4 md:px-12 lg:px-16 bg-white rounded-3xl max-w-screen-2xl mx-auto overflow-hidden ">
         {/* Background Overlays */}
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_25%,rgba(237,76,34,0.08)_0%,transparent_60%)] pointer-events-none"></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_75%,rgba(237,76,34,0.06)_0%,transparent_60%)] pointer-events-none"></div>

@@ -50,11 +50,6 @@ export default function FAQSection() {
 
   return (
     <section className="relative overflow-hidden py-16 bg-white rounded-2xl max-w-screen-2xl mx-auto mt-6 ">
-
-        {/* Background Elements */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(237,76,34,0.06)_0%,transparent_50%)]"></div>
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(237,76,34,0.04)_0%,transparent_50%)]"></div>
-
       <div className="px-4 md:px-12 lg:px-16">
         <div className=" mx-auto">
           {/* Heading */}
@@ -62,10 +57,12 @@ export default function FAQSection() {
             <span className="inline-block px-4 py-2 text-sm font-semibold text-[#ED4C22] bg-[#ED4C22]/10 rounded-full border border-[#ED4C22]/20 mb-4">
               ❓ FAQs
             </span>
-            <h2 className="text-5xl font-black text-gray-900 mb-6">
+            <h2 className="text-5xl font-bla text-gray-900 mb-6">
               Got Questions?{" "}
               <span className="relative">
-                <span className="bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">We’ve Got Answers.</span>
+                <span className="bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">
+                  We’ve Got Answers.
+                </span>
                 <div className="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-[#ED4C22] to-orange-400 rounded-full"></div>
               </span>
             </h2>

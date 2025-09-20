@@ -17,7 +17,7 @@ export default function HeroSection() {
         {/* Left Content */}
         <div className="lg:col-span-6 w-full max-w-xl mx-auto lg:mx-0 space-y-8">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight text-gray-900">
-            Taking Your Business into the{' '}
+            Taking Your Business into the{" "}
             <span className="bg-gradient-to-r from-orange-500 to-orange-700 bg-clip-text text-transparent">
               Next Digital Era
             </span>
@@ -25,18 +25,24 @@ export default function HeroSection() {
 
           {/* Pill Tags */}
           <div className="flex flex-wrap md:flex-nowrap items-center gap-3">
-            {['Excellence','Innovation','Quality'].map((tag, idx) => (
+            {["Excellence", "Innovation", "Quality"].map((tag, idx) => (
               <React.Fragment key={idx}>
                 <span className="px-5 py-2 rounded-full text-white bg-gray-900 shadow-md">
                   {tag}
                 </span>
-                {idx < 2 && <span className="hidden md:block h-0.5 w-10 bg-[#ED4C22]"></span>}
+                {idx < 2 && (
+                  <span className="hidden md:block h-0.5 w-10 bg-[#ED4C22]"></span>
+                )}
               </React.Fragment>
             ))}
           </div>
 
           <p className="text-lg text-gray-700">
-            At <span className="font-semibold text-gray-900">Trinumics</span>, we empower businesses with next-gen IT services, cutting-edge hardware, and world-class development solutions. From cloud, networking, and cybersecurity to custom software, web platforms, and mobile apps — we engineer technology that fuels growth.
+            At <span className="font-semibold text-gray-900">Trinumics</span>,
+            we empower businesses with next-gen IT services, cutting-edge
+            hardware, and world-class development solutions. From cloud,
+            networking, and cybersecurity to custom software, web platforms, and
+            mobile apps — we engineer technology that fuels growth.
           </p>
 
           <div className="flex flex-wrap gap-4">
@@ -50,14 +56,16 @@ export default function HeroSection() {
 
         {/* Right Card with Video */}
         <div className="lg:col-span-6 w-full mx-auto">
-          <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-gray-800 to-gray-900 border border-gray-100 shadow-2xl group hover:shadow-orange-500/40 transition-shadow duration-500 p-6 md:p-8">
+          <div className="relative overflow-hidden bg-gradient-to-br from-gray-900 to-black rounded-3xl border border-gray-100 shadow-2xl group hover:shadow-orange-500/40 transition-shadow duration-500 p-6 md:p-8">
             {/* Card Text */}
             <div className="space-y-4">
               <h2 className="text-2xl md:text-3xl font-black text-white">
                 Power Up Your Tech
               </h2>
               <p className="text-md md:text-lg text-gray-200">
-                From cloud solutions to custom software, we bring your ideas to life with secure, scalable, and cutting-edge technology — so your business stays ahead.
+                From cloud solutions to custom software, we bring your ideas to
+                life with secure, scalable, and cutting-edge technology — so
+                your business stays ahead.
               </p>
               <button className="relative inline-block px-5 py-2 rounded-lg bg-[#ED4C22] text-white font-medium shadow-lg transition-all duration-300 hover:bg-[#c93d19]">
                 Learn More →

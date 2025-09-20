@@ -10,7 +10,7 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="bg-gradient-to-br from-gray-800 to-gray-900 text-white py-12 relative max-w-screen-2xl mx-auto overflow-hidden rounded-t-2xl px-4 md:px-12 lg:px-16 mt-6">
+    <footer className="bg-gradient-to-br from-gray-900 to-black rounded-2xl text-white py-12 relative max-w-screen-2xl mx-auto overflow-hidden rounded-t-2xl px-4 md:px-12 lg:px-16 mt-6">
       {/* Decorative Overlay */}
       <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none rounded-t-2xl" />
 
@@ -42,7 +42,7 @@ export default function Footer() {
           </p>
 
           {/* CTA Button */}
-          <button className="group bg-[#ED4C22] hover:bg-white transition-all font-semibold px-7 py-3 rounded-lg flex items-center gap-2 shadow-md hover:shadow-lg hover:scale-105">
+          <button className="group bg-gradient-to-r from-[#ED4C22] to-orange-500 hover:bg-white transition-all font-semibold px-7 py-3 rounded-lg flex items-center gap-2 shadow-md hover:shadow-lg hover:scale-105">
             <span className="text-white group-hover:text-[#2B2D2C] transition">
               Let’s Work Together
             </span>
@@ -54,7 +54,7 @@ export default function Footer() {
 
         {/* Quick Links */}
         <div className="text-center md:text-left">
-          <h2 className="text-lg font-bold mb-6 text-[#ED4C22]">Quick Links</h2>
+          <h2 className="text-lg font-black mb-6 bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">Quick Links</h2>
           <ul className="space-y-3">
             {["Home", "Services", "About", "Portfolio", "Contact"].map(
               (link, idx) => (
@@ -64,7 +64,7 @@ export default function Footer() {
                     className="hover:text-[#ED4C22] transition relative group"
                   >
                     {link}
-                    <span className="block h-0.5 w-0 bg-[#ED4C22] transition-all group-hover:w-full mx-auto md:mx-0"></span>
+                    <span className="block h-0.5 w-0 bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent transition-all group-hover:w-full mx-auto md:mx-0"></span>
                   </a>
                 </li>
               )
@@ -74,7 +74,7 @@ export default function Footer() {
 
         {/* Services */}
         <div className="text-center md:text-left">
-          <h2 className="text-lg font-bold mb-6 text-[#ED4C22]">
+          <h2 className="text-lg font-black mb-6 bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">
             Our Services
           </h2>
           <ul className="space-y-3">
@@ -91,7 +91,7 @@ export default function Footer() {
                   className="hover:text-[#ED4C22] transition relative group"
                 >
                   {service}
-                  <span className="block h-0.5 w-0 bg-[#ED4C22] transition-all group-hover:w-full mx-auto md:mx-0"></span>
+                  <span className="block h-0.5 w-0 bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent transition-all group-hover:w-full mx-auto md:mx-0"></span>
                 </a>
               </li>
             ))}
@@ -100,7 +100,7 @@ export default function Footer() {
 
         {/* Contact */}
         <div className="flex flex-col items-center md:items-start text-center md:text-left">
-          <h2 className="text-lg font-bold mb-6 text-[#ED4C22]">Contact Us</h2>
+          <h2 className="text-lg font-black mb-6 bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">Contact Us</h2>
           <p className="text-sm text-gray-300 leading-relaxed">
             Near Afzal Sweets, 2nd floor, 201, Naya Nagar, Mira Road, Thane,
             India
@@ -116,7 +116,7 @@ export default function Footer() {
                 <a
                   key={idx}
                   href="#"
-                  className="bg-[#ED4C22] p-2.5 rounded-full text-white hover:bg-white hover:text-[#2B2D2C] transition shadow-md hover:scale-110"
+                  className="bg-gradient-to-r from-[#ED4C22] to-orange-500 p-2.5 rounded-full text-white hover:bg-white hover:text-[#2B2D2C] transition shadow-md hover:scale-110"
                 >
                   <Icon size={18} />
                 </a>

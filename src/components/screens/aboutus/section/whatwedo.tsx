@@ -1,26 +1,10 @@
 "use client";
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState } from "react";
+import { motion } from "framer-motion";
 import { Code, Brain, Cloud, Shield, ArrowRight } from "lucide-react";
 
 export const WhatWeDo = () => {
-  const [isVisible, setIsVisible] = useState(false);
   const [activeService, setActiveService] = useState(0);
-  const sectionRef = useRef(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => setIsVisible(entry.isIntersecting),
-      { threshold: 0.3 }
-    );
-
-    const currentRef = sectionRef.current;
-    if (currentRef) observer.observe(currentRef);
-
-    return () => {
-      if (currentRef) observer.unobserve(currentRef);
-      observer.disconnect();
-    };
-  }, []);
 
   const services = [
     {
@@ -78,16 +62,15 @@ export const WhatWeDo = () => {
   ];
 
   return (
-    <section
-      ref={sectionRef}
-      className="relative py-20 px-4 md:px-12 lg:px-16 bg-gradient-to-br from-gray-900 to-black  rounded-2xl max-w-screen-2xl mx-auto overflow-hidden mt-6 "
-    >
+    <section className="relative py-20 px-4 md:px-12 lg:px-16 bg-gradient-to-br from-gray-900 to-black rounded-2xl max-w-screen-2xl mx-auto overflow-hidden mt-6">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <div
-          className={`text-center mb-16 transition-all duration-1000 ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-          }`}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-16"
         >
           <div className="inline-flex items-center gap-3 bg-gradient-to-r from-orange-500/20 to-red-500/20 backdrop-blur-sm border border-orange-500/30 rounded-full px-6 py-3 mb-8">
             <Code className="w-5 h-5 text-orange-400" />
@@ -98,12 +81,12 @@ export const WhatWeDo = () => {
 
           <h2 className="text-4xl lg:text-6xl font-black text-white mb-6 leading-tight">
             What We{" "}
-           <span className="relative">
-             <span className="bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">
-              Do Best
+            <span className="relative">
+              <span className="bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">
+                Do Best
+              </span>
+              <div className="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-[#ED4C22] to-orange-400 rounded-full"></div>
             </span>
-            <div className="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-[#ED4C22] to-orange-400 rounded-full"></div>
-           </span>
           </h2>
 
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
@@ -112,26 +95,26 @@ export const WhatWeDo = () => {
             building scalable apps to optimizing enterprise systems, our
             expertise covers the entire digital journey.
           </p>
-        </div>
+        </motion.div>
 
         {/* Services Grid */}
         <div className="grid lg:grid-cols-2 gap-8">
           {services.map((service, index) => {
             const IconComponent = service.icon;
             return (
-              <div
+              <motion.div
                 key={index}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.7, delay: index * 0.2 }}
+                whileHover={{ scale: 1.02 }}
                 className={`group bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-8 hover:bg-white/10 transition-all duration-500 cursor-pointer ${
-                  isVisible
-                    ? "opacity-100 translate-y-0"
-                    : "opacity-0 translate-y-10"
-                } ${
                   activeService === index ? "ring-2 ring-orange-500/50" : ""
                 }`}
-                style={{ transitionDelay: `${index * 200}ms` }}
                 onMouseEnter={() => setActiveService(index)}
               >
-                <div className="flex items-start gap-6 mb-6">
+                <div className="flex flex-col lg:flex-row items-center lg:items-start g::items-start gap-6 mb-6 text-center lg:text-left">
                   <div
                     className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}
                   >
@@ -162,16 +145,18 @@ export const WhatWeDo = () => {
                     <ArrowRight className="w-4 h-4" />
                   </div>
                 </div>
-              </div>
+              </motion.div>
             );
           })}
         </div>
 
         {/* Bottom Message */}
-        <div
-          className={`text-center mt-16 transition-all duration-1000 delay-500 ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-          }`}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 1 }}
+          className="text-center mt-16"
         >
           <div className="bg-gradient-to-r from-orange-500/10 to-red-500/10 backdrop-blur-sm border border-orange-500/20 rounded-3xl p-8 max-w-4xl mx-auto">
             <p className="text-2xl font-bold text-white mb-4">
@@ -181,7 +166,7 @@ export const WhatWeDo = () => {
               helping your business grow smarter, faster, and safer.
             </p>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
