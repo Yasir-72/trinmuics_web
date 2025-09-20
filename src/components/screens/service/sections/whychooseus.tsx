@@ -42,12 +42,10 @@ const whyChooseUs = [
 
 export default function WhatMakesUsDifferent() {
   return (
-    <section className="py-16 px-4 sm:px-6 md:px-12 lg:px-20 max-w-screen-2xl mx-auto rounded-2xl mt-6 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute top-0 left-0 w-96 h-96 rounded-full bg-gradient-to-r from-orange-500 to-red-500 blur-3xl"></div>
-        <div className="absolute bottom-0 right-0 w-96 h-96 rounded-full bg-gradient-to-r from-gray-800 to-gray-900 blur-3xl"></div>
-      </div>
+    <section className="relative py-20 px-4 md:px-12 lg:px-16 bg-white rounded-3xl max-w-screen-2xl mx-auto overflow-hidden mt-6">
+      {/* Background Overlays */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_25%,rgba(237,76,34,0.08)_0%,transparent_60%)] pointer-events-none"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_75%,rgba(237,76,34,0.06)_0%,transparent_60%)] pointer-events-none"></div>
 
       <div className=" relative z-10">
         {/* Magazine-Style Header */}

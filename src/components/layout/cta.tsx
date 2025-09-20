@@ -3,10 +3,10 @@ import Link from "next/link";
 
 export default function CtaBanner() {
   return (
-    <section className="  py-6 rounded-2xl max-w-screen-2xl mx-auto">
+    <section className=" rounded-2xl max-w-screen-2xl mx-auto mt-6">
       <div
-        className="relative bg-gradient-to-r from-[#2B2D2C]  to-gray-800 rounded-2xl 
-          px-3 py-10 md:p-14 text-center md:text-left shadow-2xl 
+        className="relative bg-gradient-to-r from-gray-800  to-gray-900 rounded-2xl 
+          px-4 md:px-12 lg:px-16 py-16 text-center md:text-left shadow-2xl 
           overflow-hidden transition duration-500 hover:shadow-orange-500/40"
       >
         {/* Decorative Accent */}

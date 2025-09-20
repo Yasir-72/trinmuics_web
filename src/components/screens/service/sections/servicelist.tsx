@@ -58,17 +58,10 @@ export default function ServiceList() {
   const [hoveredIndex, setHoveredIndex] = React.useState(null);
 
   return (
-    <section className=" bg-white  py-16 px-4 sm:px-6 md:px-12 lg:px-20 max-w-screen-2xl mx-auto rounded-2xl mt-6">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-5">
-        <div
-          className="absolute inset-0"
-          style={{
-            backgroundImage: `repeating-linear-gradient(45deg, #2B2D2C 0, #2B2D2C 1px, transparent 1px, transparent 15px)`,
-            backgroundSize: "20px 20px",
-          }}
-        ></div>
-      </div>
+    <section className="relative py-20 px-4 md:px-12 lg:px-16 bg-white rounded-3xl max-w-screen-2xl mx-auto overflow-hidden mt-6">
+      {/* Background Overlays */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_25%,rgba(237,76,34,0.08)_0%,transparent_60%)] pointer-events-none"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_75%,rgba(237,76,34,0.06)_0%,transparent_60%)] pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto relative">
         {/* Header Section */}

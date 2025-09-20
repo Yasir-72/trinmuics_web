@@ -53,7 +53,11 @@ const techStack = [
 
 export default function TechStack() {
   return (
-    <section className="py-16 px-4 sm:px-6 md:px-12 lg:px-20 max-w-screen-2xl mx-auto rounded-2xl mt-6 bg-gradient-to-br from-gray-50 via-white to-gray-50  overflow-hidden">
+    <section className="relative py-20 px-4 md:px-12 lg:px-16 bg-white rounded-3xl max-w-screen-2xl mx-auto overflow-hidden mt-6">
+      {/* Background Overlays */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_25%,rgba(237,76,34,0.08)_0%,transparent_60%)] pointer-events-none"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_75%,rgba(237,76,34,0.06)_0%,transparent_60%)] pointer-events-none"></div>
+
       <div className="container mx-auto px-6">
         {/* Heading */}
         <div className="text-center mb-16">
@@ -63,7 +67,7 @@ export default function TechStack() {
             </div>
           </div>
           <h2 className="text-4xl sm:text-5xl font-extrabold mb-6 text-[#2B2D2C]">
-            Tech Stack  <span className="text-[#ED4C22]">We Use</span>
+            Tech Stack <span className="text-[#ED4C22]">We Use</span>
           </h2>
           <p className="text-[#2B2D2C]/70 max-w-3xl mx-auto text-lg leading-relaxed">
             We're thrilled to offer comprehensive development for Android, iOS,
@@ -115,7 +119,6 @@ export default function TechStack() {
                     />
                   </div>
                   {/* Floating accent elements */}
-                  
                 </div>
               </div>
             </div>

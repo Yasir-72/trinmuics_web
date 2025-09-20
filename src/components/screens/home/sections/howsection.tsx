@@ -52,11 +52,41 @@ const steps = [
 
 export default function HowItWorks() {
   return (
-    <section className="py-24 bg-white max-w-screen-2xl rounded-2xl mt-6 mx-auto">
-      <div className="max-w-6xl mx-auto px-4">
-        <h2 className="text-5xl font-extrabold text-center mb-20 text-[#2B2D2C]">
-          How It <span className="text-[#ED4C22]">Works</span>
-        </h2>
+    <section className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-black py-20 px-4 sm:px-6 md:px-12 lg:px-20 max-w-screen-2xl mx-auto rounded-3xl mt-8 overflow-hidden">
+      {/* Background Elements */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(237,76,34,0.08)_0%,transparent_50%)]"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(237,76,34,0.06)_0%,transparent_50%)]"></div>
+
+      {/* Floating Orbs */}
+      <div className="absolute top-20 left-20 w-72 h-72 bg-gradient-to-r from-orange-500/20 to-red-500/20 rounded-full blur-3xl animate-pulse"></div>
+      <div className="absolute bottom-20 right-20 w-96 h-96 bg-gradient-to-r from-orange-500/20 to-red-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+
+      {/* main section */}
+      <div className="px-4 md:px-12 lg:px-16 mx-auto">
+        <div className="text-center mb-20">
+          <div className="inline-block">
+            <span className="text-sm font-semibold text-[#ED4C22] bg-[#ED4C22]/10 px-4 py-2 rounded-full border border-[#ED4C22]/20 mb-4 inline-block">
+              🚀 Our Process
+            </span>
+          </div>
+
+          <h2 className="text-5xl md:text-6xl font-black text-white mb-6 leading-tight">
+            How It{" "}
+            <span className="relative">
+              <span className="bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">
+                Works
+              </span>
+              <div className="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-[#ED4C22] to-orange-400 rounded-full"></div>
+            </span>
+          </h2>
+
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+            Our proven{" "}
+            <span className="text-[#ED4C22] font-semibold">4-step process</span>{" "}
+            ensures your project is delivered on time, within budget, and
+            exceeds expectations.
+          </p>
+        </div>
 
         <div className="space-y-20">
           {steps.map((step, idx) => (
@@ -74,20 +104,30 @@ export default function HowItWorks() {
               </div>
 
               {/* Card */}
-              <div className="bg-gradient-to-br from-gray-800 to-gray-900 border-2 border-gray-100 hover:border-gray-300 text-white rounded-3xl shadow-2xl py-12 px-5 w-full md:w-4/5 lg:w-2/3">
-                <h4 className="text-3xl font-bold mb-6">{step.title}</h4> 
+
+              <div
+                className={`bg-gradient-to-br from-gray-800 to-gray-900 border-2 border-white/10 text-white rounded-3xl hover:bg-white/10  hover:shadow-2xl hover:shadow-orange-500/20 py-12 px-5 w-full md:w-4/5 lg:w-2/3 group relative overflow-hidden  transition-all duration-700 hover:scale-[1.02] ${
+                  idx % 2 === 0 ? "hover:rotate-1" : "hover:-rotate-1"
+                }`}
+              >
+                <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-orange-500/20 to-red-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl"></div>
+                <h4 className="text-3xl text-white font-black group-hover:text-orange-300 transition-colors duration-300 mb-6">
+                  {step.title}
+                </h4>
                 <p className="text-xl text-gray-300 mb-8">{step.desc}</p>
 
                 {/* Deliverables list */}
                 <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-lg text-gray-200 text-left">
                   {step.deliverables.map((item, i) => (
-                    <li key={i} className="flex items-start gap-3">
-                      {/* Circle with check */}
-                      <span className="flex items-center justify-center w-7 h-7 rounded-full bg-[#ED4C22] shrink-0 mt-1">
-                        <Check className="w-5 h-5 text-white" />
+                    <div
+                      key={i}
+                      className="flex items-center gap-3 p-3 bg-[#ED4C22]/20 rounded-xl border border-[#ED4C22]/10 hover:bg-[#ED4C22]/10 hover:border-[#ED4C22]/30 transition-all duration-300"
+                    >
+                      <div className="w-2.5 h-2.5 bg-[#ED4C22] rounded-full flex-shrink-0"></div>
+                      <span className="text-white text-sm font-medium">
+                        {item}
                       </span>
-                      <span>{item}</span>
-                    </li>
+                    </div>
                   ))}
                 </ul>
               </div>

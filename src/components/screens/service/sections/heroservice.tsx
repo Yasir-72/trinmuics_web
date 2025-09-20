@@ -7,7 +7,11 @@ import Image from "next/image";
 export default function ServiceHeroSection() {
   return (
     <>
-      <section className="bg-white py-16 px-4 sm:px-6 md:px-12 lg:px-20 max-w-screen-2xl mx-auto rounded-2xl overflow-hidden">
+      <section className="relative py-20 px-4 md:px-12 lg:px-16 bg-white rounded-3xl max-w-screen-2xl mx-auto overflow-hidden mt-6">
+        {/* Background Overlays */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_25%,rgba(237,76,34,0.08)_0%,transparent_60%)] pointer-events-none"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_75%,rgba(237,76,34,0.06)_0%,transparent_60%)] pointer-events-none"></div>
+
         <div className=" mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <div className="space-y-8 text-center lg:text-left">
@@ -32,9 +36,7 @@ export default function ServiceHeroSection() {
                 <div className="w-16 h-16 rounded-xl bg-gradient-to-r from-orange-500 to-red-600 flex items-center justify-center text-white mb-6 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-3">
                   <Code2 className="w-10 h-10" />
                 </div>
-                <h3 className="text-xl font-black mb-2">
-                  Startup Development
-                </h3>
+                <h3 className="text-xl font-black mb-2">Startup Development</h3>
                 <p className="text-sm text-gray-300">
                   Scalable, reliable, and modern applications crafted for rapid
                   growth.
