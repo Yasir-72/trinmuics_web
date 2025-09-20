@@ -12,8 +12,6 @@ import {
   Play,
   Building,
   Globe,
-  Target,
-  Heart,
 } from "lucide-react";
 import { motion } from "framer-motion";
 
@@ -32,7 +30,7 @@ const stats = [
 ];
 
 export default function TrinumicsWhoWeAre() {
-  const [playVideo, setPlayVideo] = useState(false);
+  // const [playVideo, setPlayVideo] = useState(false);
 
   return (
     <section className="relative py-20 px-4 sm:px-6 md:px-12 lg:px-16 bg-gradient-to-br from-gray-900 to-black rounded-2xl max-w-screen-2xl mx-auto overflow-hidden mt-6">
@@ -96,7 +94,7 @@ export default function TrinumicsWhoWeAre() {
             <div className="space-y-6 text-lg text-gray-300 leading-relaxed mb-12">
               <p className="text-xl">
                 At <strong className="text-orange-400">Trinumics</strong>, we
-                are more than just an IT company — we're{" "}
+                are more than just an IT company — {"we're "}
                 <span className="text-white font-semibold">
                   innovators, problem-solvers, and partners in growth.
                 </span>
@@ -106,7 +104,7 @@ export default function TrinumicsWhoWeAre() {
                 <span className="bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent font-semibold">
                   bridge businesses and technology seamlessly
                 </span>
-                , we've evolved into a trusted name in delivering{" "}
+                , {"we've"} evolved into a trusted name in delivering{" "}
                 <strong className="text-white">
                   secure, scalable, and future-ready digital solutions.
                 </strong>
@@ -172,13 +170,13 @@ export default function TrinumicsWhoWeAre() {
               <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform duration-300" />
             </button>
 
-            <button
+            {/* <button
               onClick={() => setPlayVideo(true)}
               className="group bg-transparent border-2 border-orange-500/50 text-orange-400 px-10 py-5 rounded-2xl font-semibold hover:bg-orange-500/10 hover:border-orange-500 transition-all duration-300 flex items-center justify-center gap-3 text-lg"
             >
               <Play className="w-6 h-6" />
               Watch Our Story
-            </button>
+            </button> */}
           </motion.div>
         </div>
       </div>

@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Phone, Menu, X, Sparkles } from "lucide-react";
@@ -50,7 +50,7 @@ export default function Header() {
 
         {/* Desktop Navigation */}
         <nav className="hidden lg:flex items-center space-x-2 rounded-2xl bg-gradient-to-r from-white via-orange-50 to-white shadow-xl shadow-orange-500/10 px-6 py-3 border border-orange-200/30">
-          {navItems.map((item, idx) => (
+          {navItems.map((item) => (
             <Link
               key={item.name}
               href={item.href}

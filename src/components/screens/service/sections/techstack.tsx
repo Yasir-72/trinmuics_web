@@ -70,8 +70,8 @@ export default function TechStack() {
             Tech Stack <span className="text-[#ED4C22]">We Use</span>
           </h2>
           <p className="text-[#2B2D2C]/70 max-w-3xl mx-auto text-lg leading-relaxed">
-            We're thrilled to offer comprehensive development for Android, iOS,
-            and web applications! Our secure, scalable, high-performance
+            {"We're"} thrilled to offer comprehensive development for Android,
+            iOS, and web applications! Our secure, scalable, high-performance
             solutions guarantee smooth integration across all devices.
           </p>
         </div>

@@ -207,10 +207,10 @@ export default function ContactForm() {
                   </div>
                   <div>
                     <h3 className="text-2xl font-bold text-white">
-                      Let's Start a Conversation
+                      {"Let's"} Start a Conversation
                     </h3>
                     <p className="text-gray-400">
-                      We're here to help bring your vision to life
+                      {"We're"} here to help bring your vision to life
                     </p>
                   </div>
                 </div>
@@ -325,7 +325,7 @@ export default function ContactForm() {
                       Message Sent Successfully!
                     </h3>
                     <p className="text-gray-300">
-                      Thank you for reaching out. We'll get back to you within
+                      Thank you for reaching out. {"We'll"} get back to you within
                       24 hours.
                     </p>
                   </div>
@@ -389,7 +389,7 @@ export default function ContactForm() {
 
                         {/* Review Text */}
                         <p className="text-base sm:text-lg text-gray-300 leading-relaxed mb-5 sm:mb-8 font-medium px-2 sm:px-4 lg:px-0">
-                          "{reviews[currentReview].review}"
+                          {"\"" + reviews[currentReview].review + "\""}
                         </p>
 
                         {/* Rating */}

@@ -2,7 +2,6 @@
 "use client";
 import { MoveRight } from "lucide-react";
 import React from "react";
-import Image from "next/image";
 
 export default function HeroSection() {
   return (

@@ -87,13 +87,15 @@ export default function Testimonials() {
           <h2 className="text-5xl md:text-6xl font-black text-gray-900 mb-6 leading-tight">
             What Our{" "}
             <span className="relative">
-              <span className="bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">Clients Say</span>
+              <span className="bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">
+                Clients Say
+              </span>
               <div className="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-[#ED4C22] to-orange-400 rounded-full"></div>
             </span>
           </h2>
 
           <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
-            Don't take our word for it. Here's what our{" "}
+            {"Don't"} take our word for it. {"Here's"} what our{" "}
             <span className="text-[#ED4C22] font-semibold">
               satisfied clients
             </span>{" "}
@@ -192,7 +194,7 @@ export default function Testimonials() {
 
                     {/* Enhanced Text */}
                     <p className="text-lg leading-relaxed text-gray-300 mb-8 group-hover:text-gray-200 transition-colors duration-300">
-                      "{testimonial.text}"
+                      {'"' + testimonial.text + '"'}
                     </p>
 
                     {/* Enhanced Rating */}

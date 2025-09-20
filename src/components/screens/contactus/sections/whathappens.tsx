@@ -1,6 +1,5 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
 import { MessageCircle, FileText, Cog, Rocket } from "lucide-react";
 import { motion } from "framer-motion";
 
@@ -11,12 +10,12 @@ const steps = [
     title: "Professional Consultation",
     text: (
       <>
-        You'll get consulted on your particular inquiry professionally.{" "}
+        {"You'll"} get consulted on your particular inquiry professionally.{" "}
         <span className="font-semibold text-orange-400">Our Expert Team</span>{" "}
         works swiftly within Business Development, so all of your questions
         related to tech stack, business,{" "}
         <span className=" text-orange-400  font-medium">
-          "is it even possible to engineer?"
+          {'" is it even possible to engineer?"'}
         </span>{" "}
         type of issues will be answered in great detail, or addressed to the
         right people.
@@ -54,7 +53,7 @@ const steps = [
         <span className="font-semibold text-orange-400">
           Our Product Delivery Team
         </span>{" "}
-        has a secret reputation as "Product Delivery Masterminds". They can
+        {'has a secret reputation as "Product Delivery Masterminds".'}. They can
         supervise, manage and facilitate products in the most complicated
         engineering form. Basically, they can prove,{" "}
         <span className=" text-orange-400 font-medium">
@@ -83,17 +82,11 @@ const steps = [
 ];
 
 export default function SimpleProcessSteps() {
-  const [isMobile, setIsMobile] = useState(false);
 
-  useEffect(() => {
-    const checkMobile = () => setIsMobile(window.innerWidth < 768);
-    checkMobile();
-    window.addEventListener("resize", checkMobile);
-    return () => window.removeEventListener("resize", checkMobile);
-  }, []);
+  
 
   return (
-    <section className="relative flex justify-center py-20 px-4 sm:px-8 md:px-12 lg:px-16    rounded-2xl max-w-screen-2xl mx-auto overflow-hidden">
+    <section className="relative flex justify-center py-20 px-4 sm:px-8 md:px-12 lg:px-16  bg-gradient-to-br from-gray-900 to-black   rounded-2xl max-w-screen-2xl mx-auto overflow-hidden mt-6">
       {/* Background elements */}
       <div className="absolute inset-0">
         <div className="absolute top-20 left-10 w-64 h-64 bg-gradient-to-r from-orange-500/10 to-red-500/10 rounded-full blur-3xl" />

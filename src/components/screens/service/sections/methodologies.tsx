@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import {
-  ChevronRight,
   Lightbulb,
   Users,
   Rocket,
@@ -133,12 +132,12 @@ const methodologies = [
   },
 ];
 
-const stats = [
-  { label: "Projects Delivered", value: "200+", icon: CheckCircle },
-  { label: "Client Satisfaction", value: "98%", icon: Star },
-  { label: "Avg. Time to Market", value: "45 Days", icon: Rocket },
-  { label: "Code Quality Score", value: "9.8/10", icon: BarChart3 },
-];
+// const stats = [
+//   { label: "Projects Delivered", value: "200+", icon: CheckCircle },
+//   { label: "Client Satisfaction", value: "98%", icon: Star },
+//   { label: "Avg. Time to Market", value: "45 Days", icon: Rocket },
+//   { label: "Code Quality Score", value: "9.8/10", icon: BarChart3 },
+// ];
 
 export default function EnhancedMethodologies() {
   const [hoveredCard, setHoveredCard] = useState(null);

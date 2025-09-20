@@ -61,7 +61,7 @@ export default function ClientScroll() {
           </h2>
 
           <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
-            We've partnered with some of the most{" "}
+            {"We've"} partnered with some of the most{" "}
             <span className="text-[#ED4C22] font-semibold">
               innovative companies
             </span>{" "}

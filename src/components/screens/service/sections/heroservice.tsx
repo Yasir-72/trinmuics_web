@@ -1,6 +1,5 @@
 "use client";
 
-import { section } from "framer-motion/client";
 import { Code2, Smartphone, Palette } from "lucide-react";
 import Image from "next/image";
 

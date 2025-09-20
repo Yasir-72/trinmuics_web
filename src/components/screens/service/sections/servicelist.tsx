@@ -4,7 +4,6 @@ import {
   Sparkles,
   Rocket,
   Palette,
-  Code,
   Smartphone,
   Globe,
 } from "lucide-react";

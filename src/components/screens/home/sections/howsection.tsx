@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Lightbulb, Layout, Code, Rocket, Check } from "lucide-react";
+import { Lightbulb, Layout, Code, Rocket } from "lucide-react";
 
 const steps = [
   {

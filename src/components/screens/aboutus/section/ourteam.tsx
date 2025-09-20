@@ -15,6 +15,7 @@ import {
   LucideIcon,
 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 
 export function OurPeopleAndCulture() {
   const [activeTab, setActiveTab] = useState(0);
@@ -154,9 +155,11 @@ export function OurPeopleAndCulture() {
               className="group relative overflow-hidden bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 transition-all duration-500 text-center"
             >
               <div className="relative z-10 flex flex-col items-center">
-                <img
+                <Image
                   src={member.image}
                   alt={member.name}
+                  width={200}
+                  height={200}
                   className="w-24 h-24 object-cover rounded-full border-4 border-[#ED4C22]/30 mb-4"
                 />
                 <h4 className="text-lg font-black text-white group-hover:text-orange-400 transition-colors duration-300">
