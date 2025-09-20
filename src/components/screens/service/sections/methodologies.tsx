@@ -149,7 +149,7 @@ export default function EnhancedMethodologies() {
   }, []);
 
   return (
-    <section className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-black py-20 px-4 sm:px-6 md:px-12 lg:px-20 max-w-screen-2xl mx-auto rounded-3xl mt-8 overflow-hidden">
+    <section className="relative  bg-gradient-to-br from-gray-900 to-black py-20 px-4 sm:px-6 md:px-12 lg:px-20 max-w-screen-2xl mx-auto rounded-3xl mt-8 overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.3)_1px,transparent_0)] bg-[length:50px_50px]"></div>

@@ -5,7 +5,7 @@ export default function CtaBanner() {
   return (
     <section className=" rounded-2xl max-w-screen-2xl mx-auto mt-6">
       <div
-        className="relative bg-gradient-to-r from-gray-800  to-gray-900 rounded-2xl 
+        className="relative bg-gradient-to-r from-gray-800  to-black rounded-2xl 
           px-4 md:px-12 lg:px-16 py-16 text-center md:text-left shadow-2xl 
           overflow-hidden transition duration-500 hover:shadow-orange-500/40"
       >

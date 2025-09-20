@@ -82,14 +82,14 @@ export default function TechStack() {
             <div
               key={index}
               className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center 
-              bg-gradient-to-br from-gray-800 to-gray-900 backdrop-blur-sm rounded-3xl shadow-lg p-10 
+              bg-gradient-to-br from-gray-900 to-zinc-900 backdrop-blur-sm rounded-3xl shadow-lg p-10 
                max-w-6xl mx-auto w-full
               transform transition-all duration-300 hover:scale-[1.02] 
               hover:shadow-2xl  group"
             >
               {/* Text Section */}
               <div className="space-y-6">
-                <h3 className="text-3xl font-bold text-[#ED4C22] mb-6  transition-colors duration-300">
+                <h3 className="text-3xl font-bold text-orange-400 mb-6  transition-colors duration-300">
                   {item.title}
                 </h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -98,7 +98,7 @@ export default function TechStack() {
                       key={i}
                       className="flex items-center gap-3 p-3 bg-[#ED4C22]/5 rounded-xl border border-[#ED4C22]/10 hover:bg-[#ED4C22]/10 hover:border-[#ED4C22]/30 transition-all duration-300"
                     >
-                      <div className="w-2.5 h-2.5 bg-[#ED4C22] rounded-full flex-shrink-0"></div>
+                      <div className="w-2.5 h-2.5 bg-orange-500 rounded-full flex-shrink-0"></div>
                       <span className="text-white text-sm font-medium">
                         {point}
                       </span>
