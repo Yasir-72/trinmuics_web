@@ -1,11 +1,11 @@
 "use client";
 
+import { useState } from "react";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
 import Header from "../components/layout/header";
 import Footer from "@/components/layout/footer";
-// import SplashScreen from "@/components/layout/splashscreen"; // ✅ Import Splash Screen
-// import { useEffect, useState } from "react";
+import SplashScreen from "@/components/layout/splashscreen";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -13,18 +13,12 @@ const montserrat = Montserrat({
   variable: "--font-montserrat",
 });
 
-
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
-  // const [loading, setLoading] = useState(true);
-
-  // useEffect(() => {
-  //   const timer = setTimeout(() => setLoading(false), 2500); // splash screen visible for 2.5s
-  //   return () => clearTimeout(timer);
-  // }, []);
+}) {
+  const [loading, setLoading] = useState(true);
 
   return (
     <html lang="en">
@@ -32,15 +26,15 @@ export default function RootLayout({
         suppressHydrationWarning={true}
         className={`${montserrat.variable} antialiased bg-[#DDE2E5] px-6 md:px-10`}
       >
-        {/* {loading ? (
-          // <SplashScreen /> // ✅ Show splash screen first
-        ) : ( */}
+        {loading ? (
+          <SplashScreen onComplete={() => setLoading(false)} />
+        ) : (
           <>
             <Header />
             {children}
             <Footer />
           </>
-        {/* )} */}
+        )}
       </body>
     </html>
   );

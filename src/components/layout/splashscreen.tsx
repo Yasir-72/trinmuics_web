@@ -1,54 +1,108 @@
-// "use client";
+"use client";
 
-// import React from "react";
-// import { motion } from "framer-motion";
-// import Image from "next/image";
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
 
-// export default function SplashScreen() {
-//   return (
-//     <section className="flex items-center justify-center h-screen bg-white">
-//       <motion.div
-//         className="flex items-center"
-//         initial="initial"
-//         animate="animate"
-//         variants={{
-//           initial: {},
-//           animate: {
-//             transition: {
-//               staggerChildren: 0.4, // ✅ smooth stagger effect
-//             },
-//           },
-//         }}
-//       >
-//         {/* Company Logo */}
-//         <motion.div
-//           variants={{
-//             initial: { scale: 0, opacity: 0, x: 0 },
-//             animate: { scale: 1, opacity: 1, x: -40 },
-//           }}
-//           transition={{ duration: 1.2, ease: "easeInOut" }}
-//           className="w-20 h-20 relative"
-//         >
-//           <Image
-//             src="/logo.jpg"
-//             alt="Trinumics Logo"
-//             fill
-//             className="object-contain"
-//           />
-//         </motion.div>
+interface SplashScreenProps {
+  onComplete: () => void;
+}
 
-//         {/* Company Name */}
-//         <motion.h1
-//           variants={{
-//             initial: { opacity: 0, x: 30 },
-//             animate: { opacity: 1, x: 0 },
-//           }}
-//           transition={{ duration: 1, ease: "easeInOut" }}
-//           className="text-4xl font-bold text-gray-800 ml-2"
-//         >
-//           Trinumics
-//         </motion.h1>
-//       </motion.div>
-//     </section>
-//   );
-// }
+const panels = ["bg-[#F9E6CF]", "bg-[#F9E6CF]", "bg-[#F9E6CF]", "bg-[#F9E6CF]"];
+
+export default function SplashScreen({ onComplete }: SplashScreenProps) {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const logoRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const letters = logoRef.current?.querySelectorAll("span");
+
+    const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
+
+    if (letters) {
+      // Step 1: Animate letters in
+      tl.fromTo(
+        letters,
+        { y: 50, opacity: 0, rotationX: 90, scale: 0.8, filter: "blur(6px)" },
+        {
+          y: 0,
+          opacity: 1,
+          rotationX: 0,
+          scale: 1,
+          filter: "blur(0px)",
+          duration: 0.8,
+          stagger: 0.08,
+        }
+      );
+
+      // Step 2: Subtle bounce pop
+      tl.to(
+        letters,
+        { scale: 1.05, duration: 0.2, yoyo: true, repeat: 1 },
+        "-=0.2"
+      );
+
+      // Step 3: Fade out the logo
+      tl.to(
+        logoRef.current,
+        { opacity: 0, y: -30, duration: 0.8, ease: "power2.inOut" },
+        "+=0.2"
+      );
+    }
+
+    // Step 4: Panels animate after logo disappears
+    tl.to(
+      ".panel",
+      {
+        y: "-120%",
+        rotate: -3,
+        scale: 1.05,
+        opacity: 0.85,
+        stagger: 0.15,
+        duration: 1.2,
+        ease: "power4.inOut",
+        onComplete: () => {
+          gsap.to(containerRef.current, {
+            opacity: 0,
+            duration: 0.8,
+            ease: "power2.out",
+            onComplete,
+          });
+        },
+      },
+      "+=0.1"
+    );
+  }, [onComplete]);
+
+  return (
+    <div
+      ref={containerRef}
+      className="fixed inset-0 flex items-center justify-center z-50 overflow-hidden bg-white"
+    >
+      {/* Floating glows */}
+      <div className="absolute w-[250px] h-[250px] rounded-full bg-[#00BFA6] opacity-20 blur-3xl top-16 left-16"></div>
+      <div className="absolute w-[250px] h-[250px] rounded-full bg-[#F9E6CF] opacity-20 blur-3xl bottom-16 right-16"></div>
+
+      {/* Logo */}
+      <div
+        ref={logoRef}
+        className="relative z-10 text-6xl md:text-7xl font-extrabold text-[#00BFA6] drop-shadow-2xl flex space-x-1"
+      >
+        {"Trinmuics".split("").map((char, i) => (
+          <span key={i} className="inline-block opacity-0">
+            {char}
+          </span>
+        ))}
+      </div>
+
+      {/* Panels */}
+      <div className="absolute inset-0 flex">
+        {panels.map((color, i) => (
+          <div
+            key={i}
+            className={`panel flex-1 ${color} mx-[2px] rounded-2xl`}
+          />
+        ))}
+      </div>
+    </div>
+  );
+}
