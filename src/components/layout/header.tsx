@@ -86,12 +86,17 @@ export default function Header() {
         </nav>
 
         {/* CTA Button */}
-        <button className="hidden lg:flex items-center gap-3 px-8 py-4 rounded-2xl font-bold text-white bg-gradient-to-r from-[#ED4C22] via-orange-500 to-orange-600 shadow-xl shadow-orange-500/30 hover:shadow-2xl hover:shadow-orange-500/40 transition-all duration-300 hover:scale-105 group relative overflow-hidden">
+        <button
+          onClick={() => {
+            setOpen(false);
+            window.location.href = "tel:+917977364138";
+          }}
+          className="hidden lg:flex items-center gap-3 px-8 py-4 rounded-2xl font-bold text-white bg-gradient-to-r from-[#ED4C22] via-orange-500 to-orange-600 shadow-xl shadow-orange-500/30 hover:shadow-2xl hover:shadow-orange-500/40 transition-all duration-300 hover:scale-105 group relative overflow-hidden"
+        >
           {/* Animated background */}
           <div className="absolute inset-0 bg-gradient-to-r from-orange-600 via-red-500 to-orange-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 
           {/* Sparkle effect */}
-          <Sparkles className="w-5 h-5 relative z-10 group-hover:rotate-12 transition-transform duration-300 hidden xl:inline" />
           <span className="relative z-10 hidden xl:inline">BOOK A CALL</span>
           <Phone className="w-5 h-5 relative z-10 group-hover:animate-bounce" />
 
@@ -199,7 +204,7 @@ export default function Header() {
                 <button
                   onClick={() => {
                     setOpen(false);
-                    window.location.href = "/contact";
+                    window.location.href = "/tel:+917977364138";
                   }}
                   className="w-full flex items-center justify-center gap-3 rounded-2xl bg-gradient-to-r from-[#ED4C22] to-orange-600 px-6 py-4 text-white font-bold shadow-xl shadow-orange-500/30 hover:shadow-2xl hover:shadow-orange-500/40 transition-all duration-300 group relative overflow-hidden"
                 >

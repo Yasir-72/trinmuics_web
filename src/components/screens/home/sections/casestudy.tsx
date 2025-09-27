@@ -108,7 +108,7 @@ export default function CaseStudies() {
                         <div className="h-px flex-1 bg-gradient-to-r from-[#ED4C22]/30 to-transparent"></div>
                       </div>
 
-                      <h3 className="text-3xl md:text-4xl font-bold text-white group-hover:text-[#ED4C22] transition-colors duration-300">
+                      <h3 className="text-3xl md:text-4xl font-black text-white group-hover:text-orange-400 transition-colors duration-300">
                         {title}
                       </h3>
 

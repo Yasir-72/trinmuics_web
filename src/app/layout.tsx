@@ -14,35 +14,23 @@ const montserrat = Montserrat({
   variable: "--font-montserrat",
 });
 
-
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  // const [loading, setLoading] = useState(true);
-
-  // useEffect(() => {
-  //   const timer = setTimeout(() => setLoading(false), 2500); // splash screen visible for 2.5s
-  //   return () => clearTimeout(timer);
-  // }, []);
-
   return (
     <html lang="en">
       <body
         suppressHydrationWarning={true}
         className={`${montserrat.variable} antialiased bg-[#DDE2E5] px-2 md:px-10`}
       >
-        {/* {loading ? (
-          // <SplashScreen /> // ✅ Show splash screen first
-        ) : ( */}
-          <>
-            <Header />
-            {children}
-            <CtaBanner/>
-            <Footer />
-          </>
-        {/* )} */}
+        <>
+          <Header />
+          {children}
+          <CtaBanner />
+          <Footer />
+        </>
       </body>
     </html>
   );

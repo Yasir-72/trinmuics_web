@@ -90,7 +90,7 @@ export default function ServiceSection() {
               </span>
 
               {/* Title */}
-              <h3 className="text-xl font-semibold mb-4 transition-colors duration-300 group-hover:text-[#ED4C22]">
+              <h3 className="text-xl font-black mb-4 transition-colors duration-300 group-hover:text-orange-400">
                 {title}
               </h3>
 
@@ -100,7 +100,7 @@ export default function ServiceSection() {
               </p>
 
               {/* Accent Border */}
-              <span className="absolute bottom-0 left-0 h-1 w-0 bg-[#ED4C22] transition-all duration-500 group-hover:w-full"></span>
+              <span className="absolute bottom-0 left-0 h-1 w-0 bg-orange-400 transition-all duration-500 group-hover:w-full"></span>
             </motion.div>
           ))}
         </div>

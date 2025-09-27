@@ -169,7 +169,7 @@ export default function CodingLanguagesScroll() {
                   <div className="absolute inset-0 w-16 h-16 bg-[#ED4C22]/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 </div>
 
-                <h3 className="text-2xl font-bold mb-4 text-white group-hover:text-[#ED4C22] transition-colors duration-300">
+                <h3 className="text-2xl font-black mb-4 text-white group-hover:text-orange-400 transition-colors duration-300">
                   {feature.title}
                 </h3>
 

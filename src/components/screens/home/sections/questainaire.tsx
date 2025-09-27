@@ -184,7 +184,7 @@ export default function FAQSection() {
                       <HelpCircle className="w-14 h-14 text-[#ED4C22] group-hover:text-white transition-colors duration-300" />
                     </div>
 
-                    <h3 className="text-4xl font-bold mb-3 text-[#ED4C22]">
+                    <h3 className="text-4xl font-black mb-3 text-orange-400">
                       Explore Our FAQs
                     </h3>
                     <p className="text-xl text-gray-200">

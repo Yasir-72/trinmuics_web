@@ -71,7 +71,7 @@ export default function WhyChooseUs() {
               </div>
 
               {/* Title */}
-              <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-[#ED4C22] transition-colors duration-300">
+              <h3 className="text-xl font-black text-gray-900 mb-3 group-hover:text-[#ED4C22] transition-colors duration-300">
                 {feature.title}
               </h3>
 

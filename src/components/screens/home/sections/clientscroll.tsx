@@ -211,7 +211,7 @@ export default function ClientScroll() {
                 <div className="ml-4 h-px flex-1 bg-gradient-to-r from-[#ED4C22]/40 to-transparent"></div>
               </div>
 
-              <h3 className="text-4xl font-bold mb-6 text-[#ED4C22] leading-tight">
+              <h3 className="text-4xl font-black mb-6 text-orange-400 leading-tight">
                 {activeFeature.title}
               </h3>
 

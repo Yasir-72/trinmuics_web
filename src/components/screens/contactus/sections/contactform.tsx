@@ -1,5 +1,4 @@
 "use client";
-
 import React, { useState, useEffect } from "react";
 import {
   ChevronLeft,
@@ -195,7 +194,7 @@ export default function ContactForm() {
           >
             <form
               onSubmit={handleSubmit}
-              className="relative bg-white/5 backdrop-blur-xl border border-white/20 rounded-3xl p-8 h-full"
+              className="relative bg-white/5 backdrop-blur-xl border border-white/20 rounded-3xl px-3 lg:px-8 py-8 h-full"
             >
               {/* Glow Effect */}
               <div className="absolute inset-0 bg-gradient-to-r from-orange-500/10 to-red-500/10 rounded-3xl blur-xl opacity-50" />
@@ -325,8 +324,8 @@ export default function ContactForm() {
                       Message Sent Successfully!
                     </h3>
                     <p className="text-gray-300">
-                      Thank you for reaching out. {"We'll"} get back to you within
-                      24 hours.
+                      Thank you for reaching out. {"We'll"} get back to you
+                      within 24 hours.
                     </p>
                   </div>
                 )}
@@ -389,7 +388,7 @@ export default function ContactForm() {
 
                         {/* Review Text */}
                         <p className="text-base sm:text-lg text-gray-300 leading-relaxed mb-5 sm:mb-8 font-medium px-2 sm:px-4 lg:px-0">
-                          {"\"" + reviews[currentReview].review + "\""}
+                          {'"' + reviews[currentReview].review + '"'}
                         </p>
 
                         {/* Rating */}

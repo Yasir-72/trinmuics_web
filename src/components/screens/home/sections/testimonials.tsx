@@ -183,7 +183,7 @@ export default function Testimonials() {
                       </div>
 
                       <div>
-                        <h3 className="text-2xl font-bold text-white group-hover:text-[#ED4C22] transition-colors duration-300">
+                        <h3 className="text-2xl font-black text-white group-hover:text-orange-400 transition-colors duration-300">
                           {testimonial.name}
                         </h3>
                         <p className="text-gray-300 font-medium group-hover:text-gray-200 transition-colors duration-300">
