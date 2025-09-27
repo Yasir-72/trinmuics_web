@@ -1,14 +1,18 @@
 import React from "react";
-import Heroaboutus from "../section/heroaboutus";
-import Cartaboutus from "../section/cartaboutus";
-import Chooseusaboutus from "../section/chooseusaboutus";
+import { OurIntroduction } from "../section/ourintroduction";
+import { WhatWeDo } from "../section/whatwedo";
+import { AdvantageTrinumics } from "../section/adavntagetrinumics";
+import { OurPeopleAndCulture } from "../section/ourteam";
+import TrinumicsWhoWeAre from "../section/whoweare";
 
 export default function AboutUsScreen() {
   return (
     <>
-      <Heroaboutus />
-      <Cartaboutus />
-      <Chooseusaboutus />
+      <OurIntroduction />
+      <TrinumicsWhoWeAre />
+      <WhatWeDo />
+      <AdvantageTrinumics />
+      <OurPeopleAndCulture />
     </>
   );
 }

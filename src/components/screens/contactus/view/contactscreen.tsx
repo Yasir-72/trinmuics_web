@@ -1,14 +1,12 @@
 import React from "react";
-import Details from "../sections/details";
 import WhatHappens from "../sections/whathappens";
+import ContactForm from "../sections/contactform";
 
 export default function ContractScreen() {
   return (
     <>
-      <Details />
+      <ContactForm />
       <WhatHappens />
-      {/* Later you can add other sections like this */}
-      {/* <OtherComponent /> */}
     </>
   );
 }

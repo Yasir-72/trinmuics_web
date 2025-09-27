@@ -8,7 +8,6 @@ import CaseStudyCard from "../sections/casestudy";
 import LanguagesScroll from "../sections/languages";
 import Testimonials from "../sections/testimonials";
 import Questainaire from "../sections/questainaire";
-import Form from "../sections/form";
 export default function Homescreen() {
   return (
     <>
@@ -21,7 +20,6 @@ export default function Homescreen() {
         <LanguagesScroll />
         <Testimonials />
         <Questainaire />
-        <Form />
     </> 
   );
 }
